@@ -8,6 +8,7 @@ export const en: Dict = {
   },
   nav: {
     tagline: "Bookkeeping for freelancers",
+    roadmap: "Roadmap",
     waitlistCta: "Join the waitlist",
     signIn: "Sign in",
     themeToggle: "Toggle light and dark",
@@ -93,6 +94,52 @@ export const en: Dict = {
         body: "Download the prepared figures and copy them into your tax return.",
       },
     ],
+  },
+  roadmap: {
+    eyebrow: "Roadmap",
+    title: "What's here, and what's coming.",
+    description:
+      "Mizara is in private beta. The foundation is in place; here's what we're working on now and what's planned next.",
+    columns: [
+      {
+        status: "shipped",
+        label: "In the beta now",
+        items: [
+          "Invoices, quotes with a digital signature, and recurring invoices",
+          "Receipts with AI recognition (OCR), always with your confirmation",
+          "Live tax reserve: VAT, income tax and the healthcare contribution",
+          "VAT return and annual income-tax summary as PDF",
+          "KOR with a threshold meter, or regular VAT (21/9/0%)",
+          "iDEAL payment links via Mollie",
+          "Import from Moneybird, e-Boekhouden, Exact Online and CSV/Excel",
+          "Invite your accountant with read-only access",
+          "Full data export (CSV)",
+        ],
+      },
+      {
+        status: "building",
+        label: "In progress",
+        items: [
+          "Bank feed: pull in and match transactions automatically",
+          "Smarter expense categorisation",
+          "Mileage and travel-cost tracking",
+          "Further polish of the mobile experience",
+        ],
+      },
+      {
+        status: "planned",
+        label: "Planned",
+        items: [
+          "Time tracking with an hours-criterion counter",
+          "Reminders for filing and payment deadlines",
+          "Year-end report export for your accountant",
+          "Multiple sets of books under one account",
+          "Integrations via an API",
+        ],
+      },
+    ],
+    footnote:
+      "This roadmap sets direction, not guarantees. Order and timing may change.",
   },
   privacy: {
     eyebrow: "Privacy",

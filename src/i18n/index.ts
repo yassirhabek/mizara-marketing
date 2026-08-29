@@ -16,4 +16,11 @@ export function getDict(locale: Locale): Dict {
   return dicts[locale];
 }
 
-export type { Dict } from "./types";
+export type {
+  Dict,
+  FeatureItem,
+  StepItem,
+  FaqItem,
+  RoadmapStatus,
+  RoadmapColumn,
+} from "./types";

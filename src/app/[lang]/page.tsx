@@ -8,6 +8,7 @@ import { TrustStrip } from "@/components/sections/trust-strip";
 import { ReserveExplainer } from "@/components/sections/reserve-explainer";
 import { FeatureGrid } from "@/components/sections/feature-grid";
 import { HowItWorks } from "@/components/sections/how-it-works";
+import { Roadmap } from "@/components/sections/roadmap";
 import { PrivacySection } from "@/components/sections/privacy-section";
 import { Faq } from "@/components/sections/faq";
 import { CtaBand } from "@/components/sections/cta-band";
@@ -66,6 +67,7 @@ export default async function LandingPage({
         <ReserveExplainer dict={dict} />
         <FeatureGrid dict={dict} />
         <HowItWorks dict={dict} />
+        <Roadmap dict={dict} />
         <PrivacySection dict={dict} />
         <Faq dict={dict} />
         <CtaBand locale={locale} dict={dict} />

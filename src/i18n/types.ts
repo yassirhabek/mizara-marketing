@@ -1,6 +1,12 @@
 export type FeatureItem = { title: string; body: string };
 export type StepItem = { title: string; body: string };
 export type FaqItem = { q: string; a: string };
+export type RoadmapStatus = "shipped" | "building" | "planned";
+export type RoadmapColumn = {
+  status: RoadmapStatus;
+  label: string;
+  items: string[];
+};
 
 export type Dict = {
   meta: {
@@ -9,6 +15,7 @@ export type Dict = {
   };
   nav: {
     tagline: string;
+    roadmap: string;
     waitlistCta: string;
     signIn: string;
     themeToggle: string;
@@ -41,6 +48,13 @@ export type Dict = {
     eyebrow: string;
     title: string;
     steps: StepItem[];
+  };
+  roadmap: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    columns: RoadmapColumn[];
+    footnote: string;
   };
   privacy: {
     eyebrow: string;

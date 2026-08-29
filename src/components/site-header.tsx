@@ -19,6 +19,12 @@ export function SiteHeader({
         <Wordmark href={`/${locale}`} tagline={dict.nav.tagline} />
 
         <div className="flex items-center gap-2 sm:gap-3">
+          <a
+            href="#roadmap"
+            className="hidden text-sm text-muted hover:text-carbon md:inline"
+          >
+            {dict.nav.roadmap}
+          </a>
           <LangToggle current={locale} label={dict.nav.langLabel} />
           <ThemeToggle label={dict.nav.themeToggle} />
           <Link

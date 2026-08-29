@@ -8,6 +8,7 @@ export const nl: Dict = {
   },
   nav: {
     tagline: "ZZP-boekhouding",
+    roadmap: "Roadmap",
     waitlistCta: "Op de wachtlijst",
     signIn: "Inloggen",
     themeToggle: "Wissel tussen licht en donker",
@@ -93,6 +94,52 @@ export const nl: Dict = {
         body: "Download de voorbereide rubrieken en neem ze over bij de Belastingdienst.",
       },
     ],
+  },
+  roadmap: {
+    eyebrow: "Roadmap",
+    title: "Wat er is, en wat eraan komt.",
+    description:
+      "Mizara is in private bèta. De basis staat; hieronder zie je waar we nu aan werken en wat op de planning staat.",
+    columns: [
+      {
+        status: "shipped",
+        label: "Nu in de bèta",
+        items: [
+          "Facturen, offertes met digitale handtekening en terugkerende facturen",
+          "Bonnetjes met AI-herkenning (OCR), altijd met jouw bevestiging",
+          "Live belastingreservering: btw, inkomstenbelasting en Zvw",
+          "Btw-aangifte en IB-jaaroverzicht als pdf",
+          "KOR met drempelmeter, of gewone btw (21/9/0%)",
+          "iDEAL-betaallinks via Mollie",
+          "Import uit Moneybird, e-Boekhouden, Exact Online en CSV/Excel",
+          "Accountant uitnodigen met alleen-lezen toegang",
+          "Volledige data-export (csv)",
+        ],
+      },
+      {
+        status: "building",
+        label: "In ontwikkeling",
+        items: [
+          "Bankkoppeling: transacties automatisch inladen en matchen",
+          "Slimmer categoriseren van kosten",
+          "Kilometer- en reiskostenregistratie",
+          "Mobiele ervaring verder verfijnen",
+        ],
+      },
+      {
+        status: "planned",
+        label: "Op de planning",
+        items: [
+          "Urenregistratie met urencriterium-teller",
+          "Herinneringen voor aangifte- en betaaldeadlines",
+          "Jaarrapportage exporteren voor je accountant",
+          "Meerdere administraties onder één account",
+          "Koppelingen via een API",
+        ],
+      },
+    ],
+    footnote:
+      "Deze roadmap geeft richting, geen garanties. Volgorde en timing kunnen veranderen.",
   },
   privacy: {
     eyebrow: "Privacy",
