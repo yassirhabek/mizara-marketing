@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --desk: #f3e9da;
+  --paper: #faf5ec;
+  --card: #fffcf6;
+  --wash: #f1e6d6;
+  --ink: #2a211a;
+  --muted: #776658;
+  --carbon: #c1592a;
+  --carbon-deep: #9c4520;
+  --fiscal: #b23a2e;
+  --paid: #5b8a5a;
+  --rule: #e4d5bf;
+  --warn: #b8791e;
+  --lift: 0 1px 2px rgba(42, 33, 26, 0.04), 0 8px 20px rgba(42, 33, 26, 0.06);
+  --lift-hover: 0 10px 24px color-mix(in srgb, var(--ink) 10%, transparent);
+  --desk-glow: color-mix(in srgb, var(--paper) 85%, white);
+  --desk-gradient-top: color-mix(in srgb, var(--desk) 55%, var(--paper));
+  --tile-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96'%3E%3Cg fill='none' stroke='%232a211a' stroke-opacity='0.06' stroke-width='1'%3E%3Cpolygon points='48,0 96,48 48,96 0,48'/%3E%3Crect x='31' y='31' width='34' height='34'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.dark {
+  --desk: #1c1712;
+  --paper: #221c16;
+  --card: #2b241c;
+  --wash: #362d22;
+  --ink: #f1e8da;
+  --muted: #b3a48f;
+  --carbon: #e08947;
+  --carbon-deep: #c4712f;
+  --fiscal: #d46a57;
+  --paid: #7fae7c;
+  --rule: #3d3324;
+  --warn: #d9a63d;
+  --lift: 0 1px 2px rgba(0, 0, 0, 0.2), 0 8px 20px rgba(0, 0, 0, 0.3);
+  --lift-hover: 0 10px 24px rgba(0, 0, 0, 0.35);
+  --desk-glow: color-mix(in srgb, var(--paper) 90%, var(--carbon));
+  --desk-gradient-top: color-mix(in srgb, var(--desk) 40%, var(--paper));
+  --tile-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96'%3E%3Cg fill='none' stroke='%23f1e8da' stroke-opacity='0.07' stroke-width='1'%3E%3Cpolygon points='48,0 96,48 48,96 0,48'/%3E%3Crect x='31' y='31' width='34' height='34'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+@theme inline {
+  --color-desk: var(--desk);
+  --color-paper: var(--paper);
+  --color-card: var(--card);
+  --color-wash: var(--wash);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-carbon: var(--carbon);
+  --color-carbon-deep: var(--carbon-deep);
+  --color-fiscal: var(--fiscal);
+  --color-paid: var(--paid);
+  --color-rule: var(--rule);
+  --color-warn: var(--warn);
+  --font-sans: var(--font-ui);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
+  --radius-md: 0.625rem;
+  --radius-lg: 0.875rem;
+  --radius-xl: 1.25rem;
+}
+
+html {
+  background: var(--desk);
+  color: var(--ink);
+  min-height: 100dvh;
+  overflow-x: clip;
+  color-scheme: light dark;
+  scroll-behavior: smooth;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-ui), ui-sans-serif, system-ui, sans-serif;
+  background:
+    var(--tile-pattern) 0 0/96px 96px,
+    radial-gradient(50rem 42rem at 38% -8%, color-mix(in srgb, var(--carbon) 32%, transparent) 0%, transparent 72%),
+    radial-gradient(42rem 38rem at 96% 18%, color-mix(in srgb, var(--warn) 26%, transparent) 0%, transparent 72%),
+    radial-gradient(54rem 46rem at 78% 104%, color-mix(in srgb, var(--paid) 28%, transparent) 0%, transparent 74%),
+    radial-gradient(1200px 420px at 50% -80px, var(--desk-glow) 0%, transparent 70%),
+    linear-gradient(180deg, var(--desk-gradient-top) 0%, var(--desk) 280px);
+  background-repeat: repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-attachment: fixed;
+  min-height: 100dvh;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+::selection {
+  background: color-mix(in srgb, var(--carbon) 20%, var(--card));
+  color: var(--ink);
+}
+
+.money {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.display {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--lift);
+}
+
+.letter-rule {
+  height: 2px;
+  border-radius: 999px;
+  background: var(--carbon);
+}
+
+input,
+textarea {
+  font-family: inherit;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--carbon);
+  outline-offset: 2px;
+}
