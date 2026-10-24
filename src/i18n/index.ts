@@ -1,26 +1,14 @@
 import { nl } from "./nl";
 import { en } from "./en";
+import type { Locale } from "./locales";
 import type { Dict } from "./types";
 
-export const locales = ["nl", "en"] as const;
-export type Locale = (typeof locales)[number];
-export const defaultLocale: Locale = "nl";
-
-export function isLocale(value: string | undefined | null): value is Locale {
-  return !!value && (locales as readonly string[]).includes(value);
-}
+export * from "./locales";
+export type * from "./types";
 
 const dicts = { nl, en } satisfies Record<Locale, Dict>;
 
+/** Server-side only: pass the strings a client component needs as props. */
 export function getDict(locale: Locale): Dict {
   return dicts[locale];
 }
-
-export type {
-  Dict,
-  FeatureItem,
-  StepItem,
-  FaqItem,
-  RoadmapStatus,
-  RoadmapColumn,
-} from "./types";

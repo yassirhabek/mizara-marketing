@@ -1,72 +1,82 @@
-"use client";
-
 import Link from "next/link";
-import { motion, useReducedMotion } from "framer-motion";
-import { DURATION, easeTransition } from "@/components/motion";
+import type { ComponentProps } from "react";
 
 type Variant = "primary" | "secondary" | "ghost";
-
-const styles: Record<Variant, string> = {
-  primary: "bg-carbon text-white hover:bg-carbon-deep",
-  secondary:
-    "border border-rule bg-card text-ink hover:border-carbon hover:text-carbon",
-  ghost: "text-muted hover:text-ink",
-};
+type Size = "md" | "lg";
 
 const base =
-  "inline-flex min-h-11 cursor-pointer items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-50";
+  "group/btn inline-flex min-h-11 items-center justify-center gap-2 rounded-full font-semibold whitespace-nowrap transition-[background-color,color,border-color,box-shadow,transform] duration-200 ease-out active:scale-[0.98] focus-visible:outline-offset-4";
 
-const MotionLink = motion.create(Link);
+const variants: Record<Variant, string> = {
+  primary:
+    "bg-carbon text-[#fffcf6] shadow-[0_1px_0_rgba(255,255,255,0.25)_inset,0_6px_16px_-6px_color-mix(in_srgb,var(--carbon)_70%,transparent)] hover:bg-carbon-deep dark:text-[#1c1712] dark:hover:bg-[#eb9a5c]",
+  secondary:
+    "border border-rule bg-card text-ink shadow-lift hover:border-carbon/50 hover:text-carbon-deep dark:hover:text-carbon",
+  ghost: "text-ink hover:bg-wash",
+};
 
-type ButtonProps = Omit<
-  React.ButtonHTMLAttributes<HTMLButtonElement>,
-  "onDrag" | "onDragStart" | "onDragEnd" | "onAnimationStart"
-> & { variant?: Variant };
+const sizes: Record<Size, string> = {
+  md: "px-5 text-[0.95rem]",
+  lg: "min-h-13 px-7 text-base",
+};
 
-export function Button({
-  children,
-  variant = "primary",
-  className = "",
-  ...props
-}: ButtonProps) {
-  const reduce = useReducedMotion();
+export function buttonClass(variant: Variant = "primary", size: Size = "md", extra = "") {
+  return `${base} ${variants[variant]} ${sizes[size]} ${extra}`;
+}
+
+function Arrow() {
   return (
-    <motion.button
-      {...props}
-      whileHover={reduce ? undefined : { y: -1 }}
-      whileTap={reduce ? undefined : { scale: 0.97 }}
-      transition={easeTransition(reduce, DURATION.fast)}
-      className={`${base} ${styles[variant]} ${className}`}
+    <svg
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+      className="h-4 w-4 transition-transform duration-200 ease-out group-hover/btn:translate-x-0.5"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
-      {children}
-    </motion.button>
+      <path d="M3 8h10M9 4l4 4-4 4" />
+    </svg>
   );
 }
 
-export function ButtonLink({
+type LinkProps = Omit<ComponentProps<typeof Link>, "className"> & {
+  variant?: Variant;
+  size?: Size;
+  arrow?: boolean;
+  className?: string;
+};
+
+export function ButtonLink({ variant = "primary", size = "md", arrow, className = "", children, ...props }: LinkProps) {
+  return (
+    <Link {...props} className={buttonClass(variant, size, className)}>
+      {children}
+      {arrow ? <Arrow /> : null}
+    </Link>
+  );
+}
+
+/** For URLs outside this site (the app). Plain anchor, so no client router prefetch. */
+export function ExternalButton({
   href,
-  children,
   variant = "primary",
+  size = "md",
+  arrow,
   className = "",
-  external = false,
+  children,
 }: {
   href: string;
-  children: React.ReactNode;
   variant?: Variant;
+  size?: Size;
+  arrow?: boolean;
   className?: string;
-  external?: boolean;
+  children: React.ReactNode;
 }) {
-  const reduce = useReducedMotion();
   return (
-    <MotionLink
-      href={href}
-      {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
-      whileHover={reduce ? undefined : { y: -1 }}
-      whileTap={reduce ? undefined : { scale: 0.97 }}
-      transition={easeTransition(reduce, DURATION.fast)}
-      className={`${base} ${styles[variant]} ${className}`}
-    >
+    <a href={href} className={buttonClass(variant, size, className)}>
       {children}
-    </MotionLink>
+      {arrow ? <Arrow /> : null}
+    </a>
   );
 }

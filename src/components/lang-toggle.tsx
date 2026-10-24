@@ -1,47 +1,34 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
-import { locales, type Locale } from "@/i18n";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { locales, type Locale } from "@/i18n/locales";
 
-export function LangToggle({
-  current,
-  label,
-}: {
-  current: Locale;
-  label: string;
-}) {
+/** Same slugs in both locales, so switching only swaps the first segment. Links stay crawlable. */
+export function LangToggle({ current, label }: { current: Locale; label: string }) {
   const pathname = usePathname();
-  const router = useRouter();
-
-  function switchTo(next: Locale) {
-    if (next === current) return;
-    // The proxy persists the `locale` cookie once it sees the new `/xx` segment.
-    const segments = pathname.split("/");
-    segments[1] = next;
-    router.push(segments.join("/") || `/${next}`);
-  }
+  const rest = pathname.split("/").slice(2).join("/");
 
   return (
-    <div
-      className="inline-flex items-center rounded-lg border border-rule bg-card p-0.5 text-xs"
-      role="group"
-      aria-label={label}
-    >
-      {locales.map((loc) => (
-        <button
-          key={loc}
-          type="button"
-          onClick={() => switchTo(loc)}
-          aria-pressed={loc === current}
-          className={`rounded-md px-2 py-1 font-medium uppercase tracking-wide transition-colors ${
-            loc === current
-              ? "bg-wash text-carbon"
-              : "text-muted hover:text-ink"
-          }`}
-        >
-          {loc}
-        </button>
-      ))}
+    <div className="inline-flex items-center rounded-full border border-rule bg-card/80 p-0.5 text-xs" role="group" aria-label={label}>
+      {locales.map((loc) => {
+        const active = loc === current;
+        return (
+          <Link
+            key={loc}
+            href={`/${loc}${rest ? `/${rest}` : ""}`}
+            hrefLang={loc}
+            lang={loc}
+            aria-current={active ? "true" : undefined}
+            scroll={false}
+            className={`inline-flex h-9 min-w-9 items-center justify-center rounded-full px-2 font-semibold uppercase tracking-wide transition-colors ${
+              active ? "bg-wash text-carbon-deep dark:text-carbon" : "text-muted hover:text-ink"
+            }`}
+          >
+            {loc}
+          </Link>
+        );
+      })}
     </div>
   );
 }

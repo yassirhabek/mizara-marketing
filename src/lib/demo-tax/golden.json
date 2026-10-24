@@ -1,0 +1,854 @@
+{
+ "source": "Mizara.Domain TaxCalculator.BuildTaxSnapshot (year 2026, quarter 4, Project=false, empty TaxProfile)",
+ "generated": "2026-10-23",
+ "scenarios": [
+  {
+   "name": "baseline",
+   "settings": {
+    "starter": false,
+    "urencriterium": true
+   },
+   "invoices": [
+    {
+     "date": "2026-02-27",
+     "exVatCents": 1200000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-05-29",
+     "exVatCents": 1450000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-08-28",
+     "exVatCents": 950000,
+     "vatRate": 21
+    }
+   ],
+   "expenses": [
+    {
+     "date": "2026-03-12",
+     "exVatCents": 168000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-06-18",
+     "exVatCents": 142000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-09-09",
+     "exVatCents": 110000,
+     "vatRate": 21
+    }
+   ],
+   "expected": {
+    "omzetCents": 3600000,
+    "kostenCents": 420000,
+    "winstCents": 3180000,
+    "zelfstandigenaftrekCents": 120000,
+    "mkbVrijstellingCents": 388620,
+    "belastbareWinstCents": 2671380,
+    "box1Cents": 955018,
+    "ahkCents": 311500,
+    "arbeidskortingCents": 541614,
+    "tariefbeperkingCents": 0,
+    "ibCents": 101904,
+    "zvwCents": 129562,
+    "ibZvwBufferCents": 4629,
+    "ibZvwBufferedCents": 236095,
+    "outputBtwCents": 0,
+    "inputBtwCents": 0,
+    "btwPayableCents": 0,
+    "setAsideCents": 236100,
+    "korOmzetCents": 3600000
+   }
+  },
+  {
+   "name": "default",
+   "settings": {
+    "starter": false,
+    "urencriterium": true
+   },
+   "invoices": [
+    {
+     "date": "2026-02-27",
+     "exVatCents": 1200000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-05-29",
+     "exVatCents": 1450000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-08-28",
+     "exVatCents": 950000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-10-14",
+     "exVatCents": 250000,
+     "vatRate": 21
+    }
+   ],
+   "expenses": [
+    {
+     "date": "2026-03-12",
+     "exVatCents": 168000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-06-18",
+     "exVatCents": 142000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-09-09",
+     "exVatCents": 110000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-10-09",
+     "exVatCents": 18500,
+     "vatRate": 21
+    }
+   ],
+   "expected": {
+    "omzetCents": 3850000,
+    "kostenCents": 438500,
+    "winstCents": 3411500,
+    "zelfstandigenaftrekCents": 120000,
+    "mkbVrijstellingCents": 418021,
+    "belastbareWinstCents": 2873479,
+    "box1Cents": 1027269,
+    "ahkCents": 311500,
+    "arbeidskortingCents": 546128,
+    "tariefbeperkingCents": 0,
+    "ibCents": 169641,
+    "zvwCents": 139364,
+    "ibZvwBufferCents": 6180,
+    "ibZvwBufferedCents": 315185,
+    "outputBtwCents": 52500,
+    "inputBtwCents": 3885,
+    "btwPayableCents": 48615,
+    "setAsideCents": 363800,
+    "korOmzetCents": 3850000
+   }
+  },
+  {
+   "name": "invoiceOnly",
+   "settings": {
+    "starter": false,
+    "urencriterium": true
+   },
+   "invoices": [
+    {
+     "date": "2026-02-27",
+     "exVatCents": 1200000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-05-29",
+     "exVatCents": 1450000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-08-28",
+     "exVatCents": 950000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-10-14",
+     "exVatCents": 250000,
+     "vatRate": 21
+    }
+   ],
+   "expenses": [
+    {
+     "date": "2026-03-12",
+     "exVatCents": 168000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-06-18",
+     "exVatCents": 142000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-09-09",
+     "exVatCents": 110000,
+     "vatRate": 21
+    }
+   ],
+   "expected": {
+    "omzetCents": 3850000,
+    "kostenCents": 420000,
+    "winstCents": 3430000,
+    "zelfstandigenaftrekCents": 120000,
+    "mkbVrijstellingCents": 420370,
+    "belastbareWinstCents": 2889630,
+    "box1Cents": 1033043,
+    "ahkCents": 311500,
+    "arbeidskortingCents": 546489,
+    "tariefbeperkingCents": 0,
+    "ibCents": 175054,
+    "zvwCents": 140147,
+    "ibZvwBufferCents": 6304,
+    "ibZvwBufferedCents": 321505,
+    "outputBtwCents": 52500,
+    "inputBtwCents": 0,
+    "btwPayableCents": 52500,
+    "setAsideCents": 374100,
+    "korOmzetCents": 3850000
+   }
+  },
+  {
+   "name": "rate9",
+   "settings": {
+    "starter": false,
+    "urencriterium": true
+   },
+   "invoices": [
+    {
+     "date": "2026-02-27",
+     "exVatCents": 1200000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-05-29",
+     "exVatCents": 1450000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-08-28",
+     "exVatCents": 950000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-10-14",
+     "exVatCents": 250000,
+     "vatRate": 9
+    }
+   ],
+   "expenses": [
+    {
+     "date": "2026-03-12",
+     "exVatCents": 168000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-06-18",
+     "exVatCents": 142000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-09-09",
+     "exVatCents": 110000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-10-09",
+     "exVatCents": 18500,
+     "vatRate": 21
+    }
+   ],
+   "expected": {
+    "omzetCents": 3850000,
+    "kostenCents": 438500,
+    "winstCents": 3411500,
+    "zelfstandigenaftrekCents": 120000,
+    "mkbVrijstellingCents": 418021,
+    "belastbareWinstCents": 2873479,
+    "box1Cents": 1027269,
+    "ahkCents": 311500,
+    "arbeidskortingCents": 546128,
+    "tariefbeperkingCents": 0,
+    "ibCents": 169641,
+    "zvwCents": 139364,
+    "ibZvwBufferCents": 6180,
+    "ibZvwBufferedCents": 315185,
+    "outputBtwCents": 22500,
+    "inputBtwCents": 3885,
+    "btwPayableCents": 18615,
+    "setAsideCents": 333800,
+    "korOmzetCents": 3850000
+   }
+  },
+  {
+   "name": "rate0",
+   "settings": {
+    "starter": false,
+    "urencriterium": true
+   },
+   "invoices": [
+    {
+     "date": "2026-02-27",
+     "exVatCents": 1200000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-05-29",
+     "exVatCents": 1450000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-08-28",
+     "exVatCents": 950000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-10-14",
+     "exVatCents": 250000,
+     "vatRate": 0
+    }
+   ],
+   "expenses": [
+    {
+     "date": "2026-03-12",
+     "exVatCents": 168000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-06-18",
+     "exVatCents": 142000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-09-09",
+     "exVatCents": 110000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-10-09",
+     "exVatCents": 18500,
+     "vatRate": 9
+    }
+   ],
+   "expected": {
+    "omzetCents": 3850000,
+    "kostenCents": 438500,
+    "winstCents": 3411500,
+    "zelfstandigenaftrekCents": 120000,
+    "mkbVrijstellingCents": 418021,
+    "belastbareWinstCents": 2873479,
+    "box1Cents": 1027269,
+    "ahkCents": 311500,
+    "arbeidskortingCents": 546128,
+    "tariefbeperkingCents": 0,
+    "ibCents": 169641,
+    "zvwCents": 139364,
+    "ibZvwBufferCents": 6180,
+    "ibZvwBufferedCents": 315185,
+    "outputBtwCents": 0,
+    "inputBtwCents": 1665,
+    "btwPayableCents": -1665,
+    "setAsideCents": 315200,
+    "korOmzetCents": 3850000
+   }
+  },
+  {
+   "name": "sandboxHigh",
+   "settings": {
+    "starter": false,
+    "urencriterium": true
+   },
+   "invoices": [
+    {
+     "date": "2026-02-27",
+     "exVatCents": 1200000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-05-29",
+     "exVatCents": 1450000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-08-28",
+     "exVatCents": 950000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-10-14",
+     "exVatCents": 250000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-10-20",
+     "exVatCents": 4875050,
+     "vatRate": 21
+    }
+   ],
+   "expenses": [
+    {
+     "date": "2026-03-12",
+     "exVatCents": 168000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-06-18",
+     "exVatCents": 142000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-09-09",
+     "exVatCents": 110000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-10-09",
+     "exVatCents": 18500,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-10-11",
+     "exVatCents": 64033,
+     "vatRate": 9
+    }
+   ],
+   "expected": {
+    "omzetCents": 8725050,
+    "kostenCents": 502533,
+    "winstCents": 8222517,
+    "zelfstandigenaftrekCents": 120000,
+    "mkbVrijstellingCents": 1029020,
+    "belastbareWinstCents": 7073497,
+    "box1Cents": 2586427,
+    "ahkCents": 49189,
+    "arbeidskortingCents": 330018,
+    "tariefbeperkingCents": 0,
+    "ibCents": 2207220,
+    "zvwCents": 343065,
+    "ibZvwBufferCents": 51006,
+    "ibZvwBufferedCents": 2601291,
+    "outputBtwCents": 1076261,
+    "inputBtwCents": 9648,
+    "btwPayableCents": 1066613,
+    "setAsideCents": 3668000,
+    "korOmzetCents": 8725050
+   }
+  },
+  {
+   "name": "lowIncome",
+   "settings": {
+    "starter": false,
+    "urencriterium": true
+   },
+   "invoices": [
+    {
+     "date": "2026-10-14",
+     "exVatCents": 250000,
+     "vatRate": 21
+    }
+   ],
+   "expenses": [
+    {
+     "date": "2026-10-09",
+     "exVatCents": 18500,
+     "vatRate": 21
+    }
+   ],
+   "expected": {
+    "omzetCents": 250000,
+    "kostenCents": 18500,
+    "winstCents": 231500,
+    "zelfstandigenaftrekCents": 120000,
+    "mkbVrijstellingCents": 14161,
+    "belastbareWinstCents": 97339,
+    "box1Cents": 34799,
+    "ahkCents": 311500,
+    "arbeidskortingCents": 19270,
+    "tariefbeperkingCents": 0,
+    "ibCents": 0,
+    "zvwCents": 4721,
+    "ibZvwBufferCents": 94,
+    "ibZvwBufferedCents": 4815,
+    "outputBtwCents": 52500,
+    "inputBtwCents": 3885,
+    "btwPayableCents": 48615,
+    "setAsideCents": 53500,
+    "korOmzetCents": 250000
+   }
+  },
+  {
+   "name": "btwRefund",
+   "settings": {
+    "starter": false,
+    "urencriterium": true
+   },
+   "invoices": [
+    {
+     "date": "2026-02-27",
+     "exVatCents": 1200000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-10-14",
+     "exVatCents": 10000,
+     "vatRate": 21
+    }
+   ],
+   "expenses": [
+    {
+     "date": "2026-10-09",
+     "exVatCents": 300000,
+     "vatRate": 21
+    }
+   ],
+   "expected": {
+    "omzetCents": 1210000,
+    "kostenCents": 300000,
+    "winstCents": 910000,
+    "zelfstandigenaftrekCents": 120000,
+    "mkbVrijstellingCents": 100330,
+    "belastbareWinstCents": 689670,
+    "box1Cents": 246557,
+    "ahkCents": 311500,
+    "arbeidskortingCents": 75748,
+    "tariefbeperkingCents": 0,
+    "ibCents": 0,
+    "zvwCents": 33449,
+    "ibZvwBufferCents": 669,
+    "ibZvwBufferedCents": 34118,
+    "outputBtwCents": 2100,
+    "inputBtwCents": 63000,
+    "btwPayableCents": -60900,
+    "setAsideCents": 34200,
+    "korOmzetCents": 1210000
+   }
+  },
+  {
+   "name": "midIncome",
+   "settings": {
+    "starter": false,
+    "urencriterium": true
+   },
+   "invoices": [
+    {
+     "date": "2026-03-10",
+     "exVatCents": 3100000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-06-10",
+     "exVatCents": 2900000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-10-01",
+     "exVatCents": 1200000,
+     "vatRate": 21
+    }
+   ],
+   "expenses": [
+    {
+     "date": "2026-04-01",
+     "exVatCents": 250000,
+     "vatRate": 21
+    }
+   ],
+   "expected": {
+    "omzetCents": 7200000,
+    "kostenCents": 250000,
+    "winstCents": 6950000,
+    "zelfstandigenaftrekCents": 120000,
+    "mkbVrijstellingCents": 867410,
+    "belastbareWinstCents": 5962590,
+    "box1Cents": 2169171,
+    "ahkCents": 120264,
+    "arbeidskortingCents": 412859,
+    "tariefbeperkingCents": 0,
+    "ibCents": 1636048,
+    "zvwCents": 289186,
+    "ibZvwBufferCents": 38505,
+    "ibZvwBufferedCents": 1963739,
+    "outputBtwCents": 252000,
+    "inputBtwCents": 0,
+    "btwPayableCents": 252000,
+    "setAsideCents": 2215800,
+    "korOmzetCents": 7200000
+   }
+  },
+  {
+   "name": "veryHigh",
+   "settings": {
+    "starter": false,
+    "urencriterium": true
+   },
+   "invoices": [
+    {
+     "date": "2026-03-10",
+     "exVatCents": 6000000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-06-10",
+     "exVatCents": 5000000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-10-01",
+     "exVatCents": 2400000,
+     "vatRate": 21
+    }
+   ],
+   "expenses": [
+    {
+     "date": "2026-04-01",
+     "exVatCents": 250000,
+     "vatRate": 21
+    }
+   ],
+   "expected": {
+    "omzetCents": 13400000,
+    "kostenCents": 250000,
+    "winstCents": 13150000,
+    "zelfstandigenaftrekCents": 120000,
+    "mkbVrijstellingCents": 1654810,
+    "belastbareWinstCents": 11375190,
+    "box1Cents": 4623934,
+    "ahkCents": 0,
+    "arbeidskortingCents": 9239,
+    "tariefbeperkingCents": 6785,
+    "ibCents": 4621480,
+    "zvwCents": 385148,
+    "ibZvwBufferCents": 100133,
+    "ibZvwBufferedCents": 5106761,
+    "outputBtwCents": 504000,
+    "inputBtwCents": 0,
+    "btwPayableCents": 504000,
+    "setAsideCents": 5610800,
+    "korOmzetCents": 13400000
+   }
+  },
+  {
+   "name": "lossYear",
+   "settings": {
+    "starter": false,
+    "urencriterium": true
+   },
+   "invoices": [
+    {
+     "date": "2026-10-14",
+     "exVatCents": 50000,
+     "vatRate": 21
+    }
+   ],
+   "expenses": [
+    {
+     "date": "2026-10-09",
+     "exVatCents": 90000,
+     "vatRate": 21
+    }
+   ],
+   "expected": {
+    "omzetCents": 50000,
+    "kostenCents": 90000,
+    "winstCents": -40000,
+    "zelfstandigenaftrekCents": 0,
+    "mkbVrijstellingCents": 0,
+    "belastbareWinstCents": 0,
+    "box1Cents": 0,
+    "ahkCents": 311500,
+    "arbeidskortingCents": 0,
+    "tariefbeperkingCents": 0,
+    "ibCents": 0,
+    "zvwCents": 0,
+    "ibZvwBufferCents": 0,
+    "ibZvwBufferedCents": 0,
+    "outputBtwCents": 10500,
+    "inputBtwCents": 18900,
+    "btwPayableCents": -8400,
+    "setAsideCents": 0,
+    "korOmzetCents": 50000
+   }
+  },
+  {
+   "name": "defaultStarter",
+   "settings": {
+    "starter": true,
+    "urencriterium": true
+   },
+   "invoices": [
+    {
+     "date": "2026-02-27",
+     "exVatCents": 1200000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-05-29",
+     "exVatCents": 1450000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-08-28",
+     "exVatCents": 950000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-10-14",
+     "exVatCents": 250000,
+     "vatRate": 21
+    }
+   ],
+   "expenses": [
+    {
+     "date": "2026-03-12",
+     "exVatCents": 168000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-06-18",
+     "exVatCents": 142000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-09-09",
+     "exVatCents": 110000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-10-09",
+     "exVatCents": 18500,
+     "vatRate": 21
+    }
+   ],
+   "expected": {
+    "omzetCents": 3850000,
+    "kostenCents": 438500,
+    "winstCents": 3411500,
+    "zelfstandigenaftrekCents": 120000,
+    "mkbVrijstellingCents": 391058,
+    "belastbareWinstCents": 2688142,
+    "box1Cents": 961011,
+    "ahkCents": 311500,
+    "arbeidskortingCents": 546128,
+    "tariefbeperkingCents": 0,
+    "ibCents": 103383,
+    "zvwCents": 130375,
+    "ibZvwBufferCents": 4675,
+    "ibZvwBufferedCents": 238433,
+    "outputBtwCents": 52500,
+    "inputBtwCents": 3885,
+    "btwPayableCents": 48615,
+    "setAsideCents": 287100,
+    "korOmzetCents": 3850000
+   }
+  },
+  {
+   "name": "defaultNoUren",
+   "settings": {
+    "starter": false,
+    "urencriterium": false
+   },
+   "invoices": [
+    {
+     "date": "2026-02-27",
+     "exVatCents": 1200000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-05-29",
+     "exVatCents": 1450000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-08-28",
+     "exVatCents": 950000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-10-14",
+     "exVatCents": 250000,
+     "vatRate": 21
+    }
+   ],
+   "expenses": [
+    {
+     "date": "2026-03-12",
+     "exVatCents": 168000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-06-18",
+     "exVatCents": 142000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-09-09",
+     "exVatCents": 110000,
+     "vatRate": 21
+    },
+    {
+     "date": "2026-10-09",
+     "exVatCents": 18500,
+     "vatRate": 21
+    }
+   ],
+   "expected": {
+    "omzetCents": 3850000,
+    "kostenCents": 438500,
+    "winstCents": 3411500,
+    "zelfstandigenaftrekCents": 0,
+    "mkbVrijstellingCents": 433261,
+    "belastbareWinstCents": 2978239,
+    "box1Cents": 1064720,
+    "ahkCents": 311203,
+    "arbeidskortingCents": 546128,
+    "tariefbeperkingCents": 0,
+    "ibCents": 207389,
+    "zvwCents": 144445,
+    "ibZvwBufferCents": 7037,
+    "ibZvwBufferedCents": 358871,
+    "outputBtwCents": 52500,
+    "inputBtwCents": 3885,
+    "btwPayableCents": 48615,
+    "setAsideCents": 407500,
+    "korOmzetCents": 3850000
+   }
+  },
+  {
+   "name": "lowIncomeStarter",
+   "settings": {
+    "starter": true,
+    "urencriterium": true
+   },
+   "invoices": [
+    {
+     "date": "2026-10-14",
+     "exVatCents": 250000,
+     "vatRate": 21
+    }
+   ],
+   "expenses": [
+    {
+     "date": "2026-10-09",
+     "exVatCents": 18500,
+     "vatRate": 21
+    }
+   ],
+   "expected": {
+    "omzetCents": 250000,
+    "kostenCents": 18500,
+    "winstCents": 231500,
+    "zelfstandigenaftrekCents": 120000,
+    "mkbVrijstellingCents": 0,
+    "belastbareWinstCents": 0,
+    "box1Cents": 0,
+    "ahkCents": 311500,
+    "arbeidskortingCents": 19270,
+    "tariefbeperkingCents": 0,
+    "ibCents": 0,
+    "zvwCents": 0,
+    "ibZvwBufferCents": 0,
+    "ibZvwBufferedCents": 0,
+    "outputBtwCents": 52500,
+    "inputBtwCents": 3885,
+    "btwPayableCents": 48615,
+    "setAsideCents": 48700,
+    "korOmzetCents": 250000
+   }
+  }
+ ]
+}

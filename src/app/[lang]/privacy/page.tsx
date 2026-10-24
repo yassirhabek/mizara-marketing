@@ -1,40 +1,18 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getDict, isLocale, type Locale } from "@/i18n";
-import { LegalPage } from "@/components/legal-page";
+import { getDict, isLocale } from "@/i18n";
+import { pageMetadata } from "@/lib/seo";
+import { LegalPage } from "@/components/content/legal-page";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps<"/[lang]/privacy">): Promise<Metadata> {
   const { lang } = await params;
   if (!isLocale(lang)) return {};
-  const dict = getDict(lang);
-  return {
-    title: dict.legal.privacyTitle,
-    alternates: {
-      canonical: `/${lang}/privacy`,
-      languages: { nl: "/nl/privacy", en: "/en/privacy", "x-default": "/nl/privacy" },
-    },
-  };
+  return pageMetadata(lang, "/privacy", getDict(lang).legal.privacy.meta);
 }
 
-export default async function PrivacyPage({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
+export default async function PrivacyPage({ params }: PageProps<"/[lang]/privacy">) {
   const { lang } = await params;
   if (!isLocale(lang)) notFound();
-  const locale = lang as Locale;
-  const dict = getDict(locale);
-  return (
-    <LegalPage
-      locale={locale}
-      dict={dict}
-      title={dict.legal.privacyTitle}
-      bodyText={dict.legal.privacyBody}
-    />
-  );
+  const t = getDict(lang);
+  return <LegalPage lang={lang} doc={t.legal.privacy} path="/privacy" crumb={t.common.footer.privacy} />;
 }

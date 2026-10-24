@@ -6,11 +6,11 @@ const isDev = process.env.NODE_ENV === "development";
 // websocket back to the dev server. Neither is used in production.
 const csp = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com${isDev ? " 'unsafe-eval'" : ""}`,
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob:",
   "font-src 'self' data:",
-  `connect-src 'self' https://vitals.vercel-insights.com${isDev ? " ws: http://localhost:*" : ""}`,
+  `connect-src 'self'${isDev ? " ws: http://localhost:*" : ""}`,
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self'",
@@ -26,12 +26,22 @@ const securityHeaders = [
     key: "Strict-Transport-Security",
     value: "max-age=63072000; includeSubDomains; preload",
   },
+  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
 ];
 
 const nextConfig: NextConfig = {
-  serverExternalPackages: ["postgres", "nodemailer"],
+  poweredByHeader: false,
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
   async headers() {
-    return [{ source: "/:path*", headers: securityHeaders }];
+    return [
+      { source: "/:path*", headers: securityHeaders },
+      {
+        source: "/(brand|import-logos)/:file*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
+      },
+    ];
   },
 };
 

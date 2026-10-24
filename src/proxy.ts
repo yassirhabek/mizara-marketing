@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { defaultLocale, isLocale, locales } from "@/i18n";
+import { defaultLocale, isLocale, locales } from "@/i18n/locales";
 
 const LOCALE_COOKIE = "locale";
 const ONE_YEAR = 60 * 60 * 24 * 365;
@@ -23,9 +23,7 @@ export function proxy(request: NextRequest) {
   const segment = pathname.split("/")[1];
 
   if (isLocale(segment)) {
-    const requestHeaders = new Headers(request.headers);
-    requestHeaders.set("x-locale", segment);
-    const response = NextResponse.next({ request: { headers: requestHeaders } });
+    const response = NextResponse.next();
     if (request.cookies.get(LOCALE_COOKIE)?.value !== segment) {
       response.cookies.set(LOCALE_COOKIE, segment, {
         path: "/",
