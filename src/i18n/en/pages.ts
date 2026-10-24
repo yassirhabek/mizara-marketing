@@ -3,28 +3,20 @@ import { appUrl } from "@/lib/env";
 
 export const audience: Dict["audience"] = {
   meta: {
-    title: "Bookkeeping for freelancers and sole traders in the Netherlands",
+    title: "Bookkeeping for entrepreneurs in the Netherlands",
     description:
-      "Mizara is made for freelancers with a Dutch sole proprietorship who do their own bookkeeping and want to know what they can spend. See who it fits and who it doesn't.",
+      "Mizara is made for entrepreneurs who do their own bookkeeping and want to know what they can spend. See who it fits and who it doesn't.",
   },
-  h1: "For freelancers who do their own bookkeeping",
-  lead: "You're a designer, developer, coach, photographer or tradesperson. You send invoices, have expenses and don't want a surprise every quarter. That's what Mizara is for.",
+  h1: "For entrepreneurs who do their own bookkeeping",
+  lead: "You send invoices, have expenses and don't want a surprise from the Belastingdienst every quarter. That's what Mizara is for.",
   fits: {
     title: "Mizara fits if",
     items: [
-      "you have a sole proprietorship (eenmanszaak) and are an entrepreneur for Dutch income tax",
+      "you have a sole proprietorship or private limited company (bv) and keep books in the Netherlands",
       "you keep your own books, possibly with an accountant looking over your shoulder",
       "you file quarterly VAT returns or use the KOR",
       "you want to know what to set aside without doing the maths yourself",
       "you want your invoices, receipts and bank statement in one place",
-    ],
-  },
-  notFits: {
-    title: "Look elsewhere if",
-    items: [
-      "you want a direct bank connection that pulls everything in automatically",
-      "you're looking for full tax advice about your whole situation; for that you need an accountant or tax adviser",
-      "your income tax depends heavily on things the estimate doesn't cover, such as tax partnership, box 2 or loss relief",
     ],
   },
   sections: [
@@ -34,7 +26,7 @@ export const audience: Dict["audience"] = {
       blocks: [
         {
           kind: "p",
-          text: "In your first years you often qualify for the starter deduction, and you don't yet know what you'll earn. That's exactly when seeing what to set aside after each invoice helps. See also [income tax for freelancers](/kennisbank/inkomstenbelasting-zzp).",
+          text: "In your first years you often qualify for the starter deduction, and you don't yet know what you'll earn. That's exactly when seeing what to set aside after each invoice helps. See also [income tax](/kennisbank/inkomstenbelasting-zzp).",
         },
       ],
     },
@@ -88,14 +80,14 @@ export const faq: Dict["faq"] = {
       "Answers about Mizara: what it does, how the tax estimate works, bank imports, reading receipts, your data and switching from another package.",
   },
   h1: "Frequently asked questions",
-  lead: "Question not listed? Email [support@mizara.app](mailto:support@mizara.app).",
+  lead: "Question not listed? Email [support@mizara.nl](mailto:support@mizara.nl).",
   groups: [
     {
       title: "About Mizara",
       items: [
         {
           q: "What is Mizara?",
-          a: "Online bookkeeping software for freelancers in the Netherlands. You create invoices, book expenses, import your bank statement and see what to set aside for VAT, income tax and Zvw.",
+          a: "Online bookkeeping software for entrepreneurs in the Netherlands. You create invoices, book expenses, import your bank statement and see what to set aside for VAT, income tax and Zvw.",
         },
         {
           q: "Is Mizara an accountant?",
@@ -103,11 +95,11 @@ export const faq: Dict["faq"] = {
         },
         {
           q: "Who is Mizara for?",
-          a: "Freelancers with a Dutch sole proprietorship who do their own bookkeeping. Read more on [for freelancers](/voor-zzpers).",
+          a: "Entrepreneurs who do their own bookkeeping. Read more on [who Mizara is for](/voor-zzpers).",
         },
         {
           q: "Can I try Mizara without an account?",
-          a: "Yes. The [interactive demo](/demo) runs in your browser with a fictional freelancer. Nothing is saved.",
+          a: "Yes. The [interactive demo](/demo) runs in your browser with a fictional entrepreneur. Nothing is saved.",
         },
       ],
     },
@@ -183,7 +175,7 @@ export const faq: Dict["faq"] = {
         },
         {
           q: "How do I reach Mizara?",
-          a: "Through [support@mizara.app](mailto:support@mizara.app).",
+          a: "Through [support@mizara.nl](mailto:support@mizara.nl).",
         },
       ],
     },
@@ -244,7 +236,7 @@ export const legal: Dict["legal"] = {
         blocks: [
           {
             kind: "p",
-            text: "Email [privacy@mizara.app](mailto:privacy@mizara.app). Mizara B.V. is responsible for this website.",
+            text: "Email [privacy@mizara.nl](mailto:privacy@mizara.nl). Mizara B.V. is responsible for this website.",
           },
         ],
       },
@@ -295,7 +287,7 @@ export const legal: Dict["legal"] = {
         blocks: [
           {
             kind: "p",
-            text: "Mizara B.V., [info@mizara.app](mailto:info@mizara.app).",
+            text: "Mizara B.V., [info@mizara.nl](mailto:info@mizara.nl).",
           },
         ],
       },

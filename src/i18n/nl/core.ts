@@ -2,11 +2,11 @@ import type { Dict } from "../types";
 
 export const common: Dict["common"] = {
   siteDescription:
-    "Boekhouding voor Nederlandse zzp'ers. Facturen, kosten, bankimport en btw op één plek, met een schatting van wat je opzij zet voor de Belastingdienst.",
+    "Boekhouding voor Nederlandse ondernemers. Facturen, kosten, bankimport en btw op één plek, met een schatting van wat je opzij zet voor de Belastingdienst.",
   nav: {
     home: "Home",
     features: "Functies",
-    audience: "Voor zzp'ers",
+    audience: "Voor wie",
     demo: "Demo",
     kb: "Kennisbank",
     faq: "Vragen",
@@ -32,7 +32,7 @@ export const common: Dict["common"] = {
     switchTo: "Bekijk deze pagina in het Engels",
   },
   footer: {
-    tagline: "Boekhouding voor zzp'ers die willen weten wat ze kunnen houden.",
+    tagline: "Boekhouding voor ondernemers die willen weten wat ze kunnen houden.",
     product: "Product",
     learn: "Leren",
     company: "Mizara",
@@ -76,7 +76,7 @@ export const common: Dict["common"] = {
 
 export const home: Dict["home"] = {
   meta: {
-    title: "Boekhouding voor zzp'ers: weet wat je kunt houden",
+    title: "Boekhouding voor ondernemers: weet wat je kunt houden",
     description:
       "Facturen, kosten, bankimport en btw op één plek. Mizara rekent mee wat je opzij zet voor de Belastingdienst, zodat je weet welk deel van je omzet van jou is.",
   },
@@ -102,7 +102,7 @@ export const home: Dict["home"] = {
     whyText:
       "Wat een factuur aan belasting kost, hangt af van wat je dit jaar al verdiende. In dit voorbeeld stond er al €36.000 omzet op de teller. Mizara rekent daarom over het hele jaar, met aftrekposten en heffingskortingen, en laat zien wat deze factuur daaraan toevoegt.",
     fiction:
-      "Voorbeeld met fictieve cijfers: een zzp'er zonder ander inkomen die aan het urencriterium voldoet, belastingjaar 2026.",
+      "Voorbeeld met fictieve cijfers: een ondernemer zonder ander inkomen die aan het urencriterium voldoet, belastingjaar 2026.",
   },
   unify: {
     kicker: "Eén plek",
@@ -195,29 +195,7 @@ export const home: Dict["home"] = {
     title: "Overstappen zonder opnieuw te beginnen",
     text: "Neem je klanten, facturen en boekingen mee uit Moneybird, e-Boekhouden of Exact, of importeer een CSV- of XAF-bestand.",
   },
-  honest: {
-    title: "Wat Mizara niet doet",
-    lead: "Goede boekhouding begint met weten waar de grenzen liggen.",
-    items: [
-      {
-        title: "Geen directe bankkoppeling",
-        text: "Je importeert afschriften als bestand. Mizara kan niet in je bankrekening kijken.",
-      },
-      {
-        title: "Geen belastingadvies",
-        text: "Je ziet schattingen met uitleg. Twijfel je, vraag het je accountant. Je kunt die toegang geven tot je administratie.",
-      },
-      {
-        title: "Geen blind geboekte bonnetjes",
-        text: "Uitgelezen bedragen zijn een voorstel. Pas als jij bevestigt, wordt er iets geboekt.",
-      },
-      {
-        title: "Geen aangifte namens jou",
-        text: "Mizara zet de cijfers klaar. Indienen doe je zelf, via [Mijn Belastingdienst](https://www.belastingdienst.nl/wps/wcm/connect/nl/home/inloggen-mijn-belastingdienst).",
-      },
-    ],
-  },
-  faqTitle: "Vragen die zzp'ers ons stellen",
+  faqTitle: "Veelgestelde vragen",
   faqMore: "Alle vragen",
   final: {
     title: "Begin met overzicht.",
@@ -278,7 +256,7 @@ export const demo: Dict["demo"] = {
     description:
       "Maak een factuur, voeg een bonnetje toe en zie direct wat je reserveert voor btw, inkomstenbelasting en Zvw. Werkt in je browser, zonder account.",
   },
-  h1: "Probeer Mizara met een fictieve zzp'er.",
+  h1: "Probeer Mizara met een fictieve ondernemer.",
   lead: "Je bent even Noor, ontwerper in Groningen. Ze heeft dit jaar al drie facturen verstuurd. Maak de volgende, boek een bonnetje en kijk wat er met haar reservering gebeurt.",
   profileTitle: "Wie is Noor?",
   profile: [

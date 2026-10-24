@@ -6,44 +6,8 @@ import { appUrl, signupUrl } from "@/lib/env";
 import { Container } from "@/components/ui/container";
 import { ButtonLink } from "@/components/ui/button";
 import { AppButton } from "@/components/app-button";
-import { RichText } from "@/components/rich-text";
 import { FaqList } from "@/components/faq-list";
 import { Mark } from "@/components/wordmark";
-
-export function Honest({ t, lang }: { t: Dict; lang: Locale }) {
-  const h = t.home.honest;
-  return (
-    <section aria-labelledby="honest-title" className="py-20 lg:py-28">
-      <Container>
-        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-          <div>
-            <h2 id="honest-title" data-reveal className="display t-h2 text-balance">
-              {h.title}
-            </h2>
-            <p className="t-lead mt-5 max-w-md text-ink-soft">{h.lead}</p>
-          </div>
-          <ul data-reveal="scale" className="grid gap-px overflow-hidden rounded-[1.25rem] border border-rule bg-rule sm:grid-cols-2">
-            {h.items.map((item) => (
-              <li key={item.title} className="bg-card p-6">
-                <h3 className="flex items-center gap-2.5 font-semibold">
-                  <span aria-hidden="true" className="flex h-6 w-6 items-center justify-center rounded-full bg-fiscal/10 text-fiscal">
-                    <svg viewBox="0 0 12 12" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-                      <path d="M3 3l6 6M9 3L3 9" />
-                    </svg>
-                  </span>
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-pretty text-[0.98rem] leading-relaxed text-ink-soft">
-                  <RichText text={item.text} lang={lang} />
-                </p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </Container>
-    </section>
-  );
-}
 
 const IMPORT_LOGOS = [
   { src: "/import-logos/moneybird.png", alt: "Moneybird" },

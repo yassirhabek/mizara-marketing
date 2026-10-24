@@ -1,6 +1,6 @@
 # mizara-marketing
 
-Marketing site for **Mizara**, bookkeeping for Dutch zzp'ers. Standalone Next.js 16 app,
+Marketing site for **Mizara**, bookkeeping for Dutch entrepreneurs. Standalone Next.js 16 app,
 bilingual (`/nl` default, `/en`), statically generated. Registration and login live in the
 app (`NEXT_PUBLIC_APP_URL`); this site has no database, forms or accounts.
 

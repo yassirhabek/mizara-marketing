@@ -2,11 +2,11 @@ import type { Dict } from "../types";
 
 export const common: Dict["common"] = {
   siteDescription:
-    "Bookkeeping for freelancers in the Netherlands. Invoices, expenses, bank imports and VAT in one place, with an estimate of what to set aside for the Belastingdienst.",
+    "Bookkeeping for entrepreneurs in the Netherlands. Invoices, expenses, bank imports and VAT in one place, with an estimate of what to set aside for the Belastingdienst.",
   nav: {
     home: "Home",
     features: "Features",
-    audience: "For freelancers",
+    audience: "Who it's for",
     demo: "Demo",
     kb: "Knowledge base",
     faq: "Questions",
@@ -32,7 +32,7 @@ export const common: Dict["common"] = {
     switchTo: "View this page in Dutch",
   },
   footer: {
-    tagline: "Bookkeeping for freelancers who want to know what they get to keep.",
+    tagline: "Bookkeeping for entrepreneurs who want to know what they get to keep.",
     product: "Product",
     learn: "Learn",
     company: "Mizara",
@@ -76,7 +76,7 @@ export const common: Dict["common"] = {
 
 export const home: Dict["home"] = {
   meta: {
-    title: "Bookkeeping for Dutch freelancers: know what you get to keep",
+    title: "Bookkeeping for Dutch entrepreneurs: know what you get to keep",
     description:
       "Invoices, expenses, bank imports and VAT in one place. Mizara works out what to set aside for the Belastingdienst, so you know which part of your revenue is yours.",
   },
@@ -102,7 +102,7 @@ export const home: Dict["home"] = {
     whyText:
       "What an invoice costs you in tax depends on what you've already earned this year. In this example, €36,000 of revenue was already booked. So Mizara calculates over the whole year, with deductions and tax credits, and shows what this invoice adds.",
     fiction:
-      "Example with fictional figures: a freelancer with no other income who meets the hours criterion, tax year 2026.",
+      "Example with fictional figures: an entrepreneur with no other income who meets the hours criterion, tax year 2026.",
   },
   unify: {
     kicker: "One place",
@@ -195,29 +195,7 @@ export const home: Dict["home"] = {
     title: "Switch without starting over",
     text: "Bring your clients, invoices and bookings from Moneybird, e-Boekhouden or Exact, or import a CSV or XAF file.",
   },
-  honest: {
-    title: "What Mizara doesn't do",
-    lead: "Good bookkeeping starts with knowing where the limits are.",
-    items: [
-      {
-        title: "No direct bank connection",
-        text: "You import statements as files. Mizara can't look into your bank account.",
-      },
-      {
-        title: "No tax advice",
-        text: "You see estimates with explanations. If in doubt, ask your accountant. You can give them access to your books.",
-      },
-      {
-        title: "No receipts booked blindly",
-        text: "Amounts read from a receipt are a suggestion. Nothing is booked until you confirm.",
-      },
-      {
-        title: "No returns filed for you",
-        text: "Mizara prepares the figures. You file them yourself, in [Mijn Belastingdienst](https://www.belastingdienst.nl/wps/wcm/connect/nl/home/inloggen-mijn-belastingdienst).",
-      },
-    ],
-  },
-  faqTitle: "Questions freelancers ask us",
+  faqTitle: "Frequently asked questions",
   faqMore: "All questions",
   final: {
     title: "Start with clarity.",
@@ -278,7 +256,7 @@ export const demo: Dict["demo"] = {
     description:
       "Create an invoice, add a receipt and see what to set aside for VAT, income tax and Zvw. Runs in your browser, no account needed.",
   },
-  h1: "Try Mizara with a fictional freelancer.",
+  h1: "Try Mizara with a fictional entrepreneur.",
   lead: "You're Noor for a moment, a designer in Groningen. She has already sent three invoices this year. Create the next one, book a receipt and see what happens to her set-aside.",
   profileTitle: "Who is Noor?",
   profile: [

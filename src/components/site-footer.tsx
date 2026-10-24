@@ -48,7 +48,7 @@ export function SiteFooter({ lang }: { lang: Locale }) {
   const company: FooterLink[] = [
     { href: l("/voor-zzpers"), label: t.common.nav.audience },
     { href: l("/faq"), label: t.common.nav.faq },
-    { href: "mailto:support@mizara.app", label: `${f.contact}: support@mizara.app`, external: true },
+    { href: "mailto:support@mizara.nl", label: `${f.contact}: support@mizara.nl`, external: true },
   ];
   const legal: FooterLink[] = [
     { href: `${appUrl}/privacy`, label: f.appPrivacy, external: true },

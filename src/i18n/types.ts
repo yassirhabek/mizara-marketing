@@ -172,7 +172,6 @@ export type Dict = {
       howSteps: Inline[];
     };
     imports: { title: string; text: string };
-    honest: { title: string; lead: string; items: { title: string; text: Inline }[] };
     faqTitle: string;
     faqMore: string;
     final: { title: string; text: string };
@@ -327,7 +326,6 @@ export type Dict = {
     h1: string;
     lead: string;
     fits: { title: string; items: string[] };
-    notFits: { title: string; items: Inline[] };
     sections: Section[];
   };
   faq: { meta: PageMeta; h1: string; lead: string; groups: { title: string; items: QA[] }[] };

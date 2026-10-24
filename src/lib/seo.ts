@@ -48,9 +48,9 @@ export function organizationLd(lang: Locale) {
     legalName: "Mizara B.V.",
     url: siteUrl,
     logo: absolute("/brand/mark.svg"),
-    email: "info@mizara.app",
+    email: "info@mizara.nl",
     description: getDict(lang).common.siteDescription,
-    contactPoint: [{ "@type": "ContactPoint", contactType: "customer support", email: "support@mizara.app", availableLanguage: ["nl", "en"] }],
+    contactPoint: [{ "@type": "ContactPoint", contactType: "customer support", email: "support@mizara.nl", availableLanguage: ["nl", "en"] }],
   };
 }
 

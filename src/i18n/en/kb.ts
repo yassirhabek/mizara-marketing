@@ -34,12 +34,12 @@ const src = {
 export const kb: Dict["kb"] = {
   hub: {
     meta: {
-      title: "Knowledge base: tax and bookkeeping for Dutch freelancers",
+      title: "Knowledge base: tax and bookkeeping",
       description:
-        "Clear explanations of VAT, income tax, the KOR and how much to set aside as a freelancer in the Netherlands. With 2026 examples and links to the Belastingdienst.",
+        "Clear explanations of VAT, income tax, the KOR and how much to set aside in the Netherlands. With 2026 examples and links to the Belastingdienst.",
     },
-    h1: "Knowledge base for freelancers",
-    lead: "Answers to the questions every freelancer in the Netherlands asks at some point, with worked examples for tax year 2026 and links to the source.",
+    h1: "Knowledge base",
+    lead: "Answers on VAT, income tax and setting money aside, with worked examples for tax year 2026 and links to the source.",
     note: "These articles explain how things work. They are not tax advice. For your own situation, check the Belastingdienst or ask your accountant.",
   },
   reviewed: "2026-10-23",
@@ -47,11 +47,11 @@ export const kb: Dict["kb"] = {
     "hoeveel-belasting-apart-zetten-zzp": {
       slug: "hoeveel-belasting-apart-zetten-zzp",
       meta: {
-        title: "How much tax should a Dutch freelancer set aside? (2026)",
+        title: "How much tax should you set aside? (2026)",
         description:
           "Set aside all VAT, and reserve for income tax and Zvw based on your annual profit rather than a fixed percentage. With a worked example for 2026.",
       },
-      h1: "How much tax should you set aside as a freelancer?",
+      h1: "How much tax should you set aside?",
       lead: "You'll often hear the 30% rule of thumb. Sometimes that's too much, sometimes too little. Here's how to work out an amount that fits your year.",
       shortAnswer: `Set aside all the VAT you invoice: it isn't yours. For income tax and Zvw, it depends on your profit over the whole year. At ${w(ladder[1].profitCents)} profit, that averages around ${p(ladder[1].averageRate)}, but about ${p(ladder[1].marginalRate)} of each extra euro already goes to the Belastingdienst.`,
       readMinutes: 6,
@@ -76,7 +76,7 @@ export const kb: Dict["kb"] = {
             },
             {
               kind: "p",
-              text: "How VAT works and when you pay it is covered in [calculating VAT as a freelancer](/kennisbank/btw-berekenen-zzp). If you use the [small business scheme (KOR)](/kennisbank/kor-regeling), you don't charge VAT, so there's nothing to set aside for it.",
+              text: "How VAT works and when you pay it is covered in [calculating VAT](/kennisbank/btw-berekenen-zzp). If you use the [small business scheme (KOR)](/kennisbank/kor-regeling), you don't charge VAT, so there's nothing to set aside for it.",
             },
           ],
         },
@@ -157,7 +157,7 @@ export const kb: Dict["kb"] = {
           blocks: [
             {
               kind: "p",
-              text: "Many freelancers get a provisional assessment (voorlopige aanslag): the Belastingdienst estimates your income tax and Zvw in advance and you pay it in monthly instalments. What you already pay that way doesn't need to be set aside. If the estimate doesn't match your actual profit, change it in Mijn Belastingdienst.",
+              text: "Many entrepreneurs get a provisional assessment (voorlopige aanslag): the Belastingdienst estimates your income tax and Zvw in advance and you pay it in monthly instalments. What you already pay that way doesn't need to be set aside. If the estimate doesn't match your actual profit, change it in Mijn Belastingdienst.",
             },
             {
               kind: "callout",
@@ -169,19 +169,19 @@ export const kb: Dict["kb"] = {
       ],
       sources: [src.box1, src.zelfstandigenaftrek, src.mkb, src.zvw, src.voorlopig, src.kvk],
       related: [
-        { href: "/kennisbank/inkomstenbelasting-zzp", label: "Income tax for freelancers" },
-        { href: "/kennisbank/btw-berekenen-zzp", label: "Calculating VAT as a freelancer" },
+        { href: "/kennisbank/inkomstenbelasting-zzp", label: "Income tax" },
+        { href: "/kennisbank/btw-berekenen-zzp", label: "Calculating VAT" },
         { href: "/functies/belastingoverzicht", label: "The tax overview in Mizara" },
       ],
     },
     "btw-berekenen-zzp": {
       slug: "btw-berekenen-zzp",
       meta: {
-        title: "Calculating VAT as a Dutch freelancer: rates, deduction and returns (2026)",
+        title: "Calculating VAT: rates, deduction and returns (2026)",
         description:
-          "How to calculate VAT as a freelancer in the Netherlands: which rate, how to deduct VAT on costs, when to file and what goes on your invoice. With examples.",
+          "How to calculate VAT in the Netherlands: which rate, how to deduct VAT on costs, when to file and what goes on your invoice. With examples.",
       },
-      h1: "Calculating VAT as a freelancer",
+      h1: "Calculating VAT",
       lead: "VAT (btw) is the tax your client pays and you pass on. Once you know which rate to charge and which VAT you can deduct, the rest is a matter of keeping track.",
       shortAnswer:
         "Charge VAT on your amount excluding VAT: usually 21%, sometimes 9% or 0%. Deduct the VAT you pay on business costs. Pay the difference with your VAT return, usually quarterly, by the last day of the month after the quarter.",
@@ -257,7 +257,7 @@ export const kb: Dict["kb"] = {
           blocks: [
             {
               kind: "p",
-              text: "Most freelancers file VAT returns quarterly. The return and payment must arrive by the last day of the month after the quarter. Even if you invoiced nothing, you still file.",
+              text: "Most entrepreneurs file VAT returns quarterly. The return and payment must arrive by the last day of the month after the quarter. Even if you invoiced nothing, you still file.",
             },
             {
               kind: "table",
@@ -297,12 +297,12 @@ export const kb: Dict["kb"] = {
     "inkomstenbelasting-zzp": {
       slug: "inkomstenbelasting-zzp",
       meta: {
-        title: "Income tax for Dutch freelancers: how it's calculated (2026)",
+        title: "Income tax: how it's calculated (2026)",
         description:
           "From profit to income tax: self-employed deduction, starter deduction, SME profit exemption, rates, tax credits and Zvw in 2026. With a worked example.",
       },
-      h1: "Income tax for freelancers: from profit to assessment",
-      lead: "As a freelancer you pay income tax on your profit, after a few deductions. The Zvw contribution comes on top. Step by step, it looks like this.",
+      h1: "Income tax: from profit to assessment",
+      lead: "You pay income tax on your profit, after a few deductions. The Zvw contribution comes on top. Step by step, it looks like this.",
       shortAnswer:
         "Your profit is reduced by the self-employed deduction (€1,200 in 2026, if you meet the hours criterion), possibly the starter deduction (€2,123) and the SME profit exemption (12.7%). On what's left you pay 35.75% up to €38,883 and 37.56% above, minus tax credits. On top of that you pay 4.85% Zvw.",
       readMinutes: 7,
@@ -401,7 +401,7 @@ export const kb: Dict["kb"] = {
       meta: {
         title: "The Dutch small business scheme (KOR) explained (2026)",
         description:
-          "What is the KOR, who can join, what are the pros and cons and what happens when you go over €20,000 revenue? Explained for freelancers.",
+          "What is the KOR, who can join, what are the pros and cons and what happens when you go over €20,000 revenue?",
       },
       h1: "The small business scheme (KOR): when does it make sense?",
       lead: "With the KOR you don't charge VAT and don't file VAT returns. That saves work and can lower your prices for consumers. But you can't reclaim VAT either.",
@@ -484,7 +484,7 @@ export const kb: Dict["kb"] = {
       ],
       sources: [src.korVoorwaarden, src.korAf, src.korAan],
       related: [
-        { href: "/kennisbank/btw-berekenen-zzp", label: "Calculating VAT as a freelancer" },
+        { href: "/kennisbank/btw-berekenen-zzp", label: "Calculating VAT" },
         { href: "/voor-zzpers", label: "Who Mizara is for" },
         { href: "/functies/facturen", label: "Invoices in Mizara" },
       ],

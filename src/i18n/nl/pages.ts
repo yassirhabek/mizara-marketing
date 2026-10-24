@@ -3,28 +3,20 @@ import { appUrl } from "@/lib/env";
 
 export const audience: Dict["audience"] = {
   meta: {
-    title: "Boekhouding voor zzp'ers en eenmanszaken",
+    title: "Boekhouding voor ondernemers",
     description:
-      "Mizara is gemaakt voor zzp'ers met een eenmanszaak die zelf hun administratie doen en willen weten wat ze kunnen uitgeven. Lees voor wie het past en voor wie niet.",
+      "Mizara is gemaakt voor ondernemers die zelf hun administratie doen en willen weten wat ze kunnen uitgeven. Lees voor wie het past en voor wie niet.",
   },
-  h1: "Voor zzp'ers die zelf hun administratie doen",
-  lead: "Je bent ontwerper, ontwikkelaar, coach, fotograaf of vakman. Je stuurt facturen, maakt kosten en wilt niet elk kwartaal schrikken. Daar is Mizara voor.",
+  h1: "Voor ondernemers die zelf hun administratie doen",
+  lead: "Je stuurt facturen, maakt kosten en wilt niet elk kwartaal schrikken van de Belastingdienst. Daar is Mizara voor.",
   fits: {
     title: "Mizara past bij je als",
     items: [
-      "je een eenmanszaak hebt en ondernemer bent voor de inkomstenbelasting",
+      "je een eenmanszaak of bv hebt en je administratie in Nederland bijhoudt",
       "je je administratie zelf bijhoudt, eventueel met een accountant die meekijkt",
       "je per kwartaal btw-aangifte doet of de KOR gebruikt",
       "je wilt weten wat je opzij moet zetten zonder zelf te rekenen",
       "je je facturen, bonnetjes en bankafschrift op één plek wilt hebben",
-    ],
-  },
-  notFits: {
-    title: "Kijk verder als",
-    items: [
-      "je een directe bankkoppeling wilt die alles automatisch ophaalt",
-      "je een volledig fiscaal advies over je hele situatie zoekt; daarvoor heb je een accountant of belastingadviseur nodig",
-      "je inkomstenbelasting sterk afhangt van zaken die de schatting niet meeneemt, zoals fiscaal partnerschap, box 2 of verliesverrekening",
     ],
   },
   sections: [
@@ -34,7 +26,7 @@ export const audience: Dict["audience"] = {
       blocks: [
         {
           kind: "p",
-          text: "In je eerste jaren heb je vaak recht op startersaftrek, en je weet nog niet goed wat je verdient. Juist dan helpt het om na elke factuur te zien wat je moet reserveren. Lees ook [inkomstenbelasting als zzp'er](/kennisbank/inkomstenbelasting-zzp).",
+          text: "In je eerste jaren heb je vaak recht op startersaftrek, en je weet nog niet goed wat je verdient. Juist dan helpt het om na elke factuur te zien wat je moet reserveren. Lees ook [inkomstenbelasting](/kennisbank/inkomstenbelasting-zzp).",
         },
       ],
     },
@@ -88,14 +80,14 @@ export const faq: Dict["faq"] = {
       "Antwoorden over Mizara: wat het doet, hoe de belastingschatting werkt, bankimport, bonnetjes uitlezen, je gegevens en overstappen.",
   },
   h1: "Veelgestelde vragen",
-  lead: "Staat je vraag er niet bij? Mail naar [support@mizara.app](mailto:support@mizara.app).",
+  lead: "Staat je vraag er niet bij? Mail naar [support@mizara.nl](mailto:support@mizara.nl).",
   groups: [
     {
       title: "Over Mizara",
       items: [
         {
           q: "Wat is Mizara?",
-          a: "Online boekhoudsoftware voor Nederlandse zzp'ers. Je maakt facturen, boekt kosten, importeert je bankafschrift en ziet wat je reserveert voor btw, inkomstenbelasting en Zvw.",
+          a: "Online boekhoudsoftware voor Nederlandse ondernemers. Je maakt facturen, boekt kosten, importeert je bankafschrift en ziet wat je reserveert voor btw, inkomstenbelasting en Zvw.",
         },
         {
           q: "Is Mizara een accountant?",
@@ -103,11 +95,11 @@ export const faq: Dict["faq"] = {
         },
         {
           q: "Voor wie is Mizara?",
-          a: "Voor zzp'ers met een eenmanszaak die zelf hun administratie doen. Lees meer op [voor zzp'ers](/voor-zzpers).",
+          a: "Voor ondernemers die zelf hun administratie doen. Lees meer op [voor wie Mizara is](/voor-zzpers).",
         },
         {
           q: "Kan ik Mizara uitproberen zonder account?",
-          a: "Ja. De [interactieve demo](/demo) werkt in je browser met een fictieve zzp'er. Er wordt niets opgeslagen.",
+          a: "Ja. De [interactieve demo](/demo) werkt in je browser met een fictieve ondernemer. Er wordt niets opgeslagen.",
         },
       ],
     },
@@ -183,7 +175,7 @@ export const faq: Dict["faq"] = {
         },
         {
           q: "Hoe bereik ik Mizara?",
-          a: "Via [support@mizara.app](mailto:support@mizara.app).",
+          a: "Via [support@mizara.nl](mailto:support@mizara.nl).",
         },
       ],
     },
@@ -246,7 +238,7 @@ export const legal: Dict["legal"] = {
         blocks: [
           {
             kind: "p",
-            text: "Mail naar [privacy@mizara.app](mailto:privacy@mizara.app). Mizara B.V. is verantwoordelijk voor deze website.",
+            text: "Mail naar [privacy@mizara.nl](mailto:privacy@mizara.nl). Mizara B.V. is verantwoordelijk voor deze website.",
           },
         ],
       },
@@ -297,7 +289,7 @@ export const legal: Dict["legal"] = {
         blocks: [
           {
             kind: "p",
-            text: "Mizara B.V., [info@mizara.app](mailto:info@mizara.app).",
+            text: "Mizara B.V., [info@mizara.nl](mailto:info@mizara.nl).",
           },
         ],
       },

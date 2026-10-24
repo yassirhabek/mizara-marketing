@@ -34,12 +34,12 @@ const src = {
 export const kb: Dict["kb"] = {
   hub: {
     meta: {
-      title: "Kennisbank: belasting en administratie voor zzp'ers",
+      title: "Kennisbank: belasting en administratie",
       description:
-        "Heldere uitleg over btw, inkomstenbelasting, de KOR en hoeveel je opzij zet als zzp'er. Met rekenvoorbeelden voor 2026 en verwijzingen naar de Belastingdienst.",
+        "Heldere uitleg over btw, inkomstenbelasting, de KOR en hoeveel je opzij zet. Met rekenvoorbeelden voor 2026 en verwijzingen naar de Belastingdienst.",
     },
-    h1: "Kennisbank voor zzp'ers",
-    lead: "Antwoorden op de vragen die elke zzp'er een keer heeft, met rekenvoorbeelden voor belastingjaar 2026 en verwijzingen naar de bron.",
+    h1: "Kennisbank",
+    lead: "Antwoorden op vragen over btw, inkomstenbelasting en reserveren, met rekenvoorbeelden voor belastingjaar 2026 en verwijzingen naar de bron.",
     note: "Deze artikelen leggen uit hoe het werkt. Ze zijn geen belastingadvies. Voor je eigen situatie kijk je bij de Belastingdienst of vraag je je accountant.",
   },
   reviewed: "2026-10-23",
@@ -47,11 +47,11 @@ export const kb: Dict["kb"] = {
     "hoeveel-belasting-apart-zetten-zzp": {
       slug: "hoeveel-belasting-apart-zetten-zzp",
       meta: {
-        title: "Hoeveel belasting moet je apart zetten als zzp'er? (2026)",
+        title: "Hoeveel belasting moet je apart zetten? (2026)",
         description:
           "Zet alle btw apart en reserveer voor inkomstenbelasting en Zvw op basis van je jaarwinst, niet met een vast percentage. Met rekenvoorbeeld voor 2026.",
       },
-      h1: "Hoeveel belasting moet je apart zetten als zzp'er?",
+      h1: "Hoeveel belasting moet je apart zetten?",
       lead: "De vuistregel van 30% hoor je vaak. Soms zet je daarmee te veel apart, soms te weinig. Zo bereken je een bedrag dat bij jouw jaar past.",
       shortAnswer: `Zet de btw die je factureert volledig apart: die is niet van jou. Voor inkomstenbelasting en Zvw hangt het af van je winst over het hele jaar. Bij ${w(ladder[1].profitCents)} winst is dat gemiddeld zo'n ${p(ladder[1].averageRate)}, maar van elke extra euro gaat dan al ongeveer ${p(ladder[1].marginalRate)} naar de Belastingdienst.`,
       readMinutes: 6,
@@ -76,7 +76,7 @@ export const kb: Dict["kb"] = {
             },
             {
               kind: "p",
-              text: "Hoe btw werkt en wanneer je hem betaalt, lees je in [btw berekenen als zzp'er](/kennisbank/btw-berekenen-zzp). Gebruik je de [kleineondernemersregeling](/kennisbank/kor-regeling), dan reken je geen btw en is er ook niets apart te zetten.",
+              text: "Hoe btw werkt en wanneer je hem betaalt, lees je in [btw berekenen](/kennisbank/btw-berekenen-zzp). Gebruik je de [kleineondernemersregeling](/kennisbank/kor-regeling), dan reken je geen btw en is er ook niets apart te zetten.",
             },
           ],
         },
@@ -157,7 +157,7 @@ export const kb: Dict["kb"] = {
           blocks: [
             {
               kind: "p",
-              text: "Veel zzp'ers krijgen een voorlopige aanslag: de Belastingdienst schat je inkomstenbelasting en Zvw vooraf en je betaalt die in maandelijkse termijnen. Wat je zo al betaalt, hoef je niet meer te reserveren. Klopt de schatting niet met je echte winst, dan wijzig je de voorlopige aanslag in Mijn Belastingdienst.",
+              text: "Veel ondernemers krijgen een voorlopige aanslag: de Belastingdienst schat je inkomstenbelasting en Zvw vooraf en je betaalt die in maandelijkse termijnen. Wat je zo al betaalt, hoef je niet meer te reserveren. Klopt de schatting niet met je echte winst, dan wijzig je de voorlopige aanslag in Mijn Belastingdienst.",
             },
             {
               kind: "callout",
@@ -169,19 +169,19 @@ export const kb: Dict["kb"] = {
       ],
       sources: [src.box1, src.zelfstandigenaftrek, src.mkb, src.zvw, src.voorlopig, src.kvk],
       related: [
-        { href: "/kennisbank/inkomstenbelasting-zzp", label: "Inkomstenbelasting als zzp'er" },
-        { href: "/kennisbank/btw-berekenen-zzp", label: "Btw berekenen als zzp'er" },
+        { href: "/kennisbank/inkomstenbelasting-zzp", label: "Inkomstenbelasting" },
+        { href: "/kennisbank/btw-berekenen-zzp", label: "Btw berekenen" },
         { href: "/functies/belastingoverzicht", label: "Het belastingoverzicht in Mizara" },
       ],
     },
     "btw-berekenen-zzp": {
       slug: "btw-berekenen-zzp",
       meta: {
-        title: "Btw berekenen als zzp'er: tarieven, aftrek en aangifte (2026)",
+        title: "Btw berekenen: tarieven, aftrek en aangifte (2026)",
         description:
-          "Zo bereken je btw als zzp'er: welk tarief, hoe je btw op kosten aftrekt, wanneer je aangifte doet en wat er op je factuur moet staan. Met voorbeelden.",
+          "Zo bereken je btw: welk tarief, hoe je btw op kosten aftrekt, wanneer je aangifte doet en wat er op je factuur moet staan. Met voorbeelden.",
       },
-      h1: "Btw berekenen als zzp'er",
+      h1: "Btw berekenen",
       lead: "Btw is de belasting die je klant betaalt en jij doorgeeft. Als je weet welk tarief je rekent en welke btw je mag aftrekken, is de rest een kwestie van bijhouden.",
       shortAnswer:
         "Reken btw over je bedrag exclusief btw: meestal 21%, soms 9% of 0%. De btw die je zelf op zakelijke kosten betaalt, trek je af. Het verschil betaal je bij je btw-aangifte, meestal per kwartaal, uiterlijk de laatste dag van de maand na het kwartaal.",
@@ -257,7 +257,7 @@ export const kb: Dict["kb"] = {
           blocks: [
             {
               kind: "p",
-              text: "De meeste zzp'ers doen per kwartaal btw-aangifte. Aangifte en betaling moeten binnen zijn op de laatste dag van de maand na het kwartaal. Ook als je niets hebt gefactureerd, doe je aangifte.",
+              text: "De meeste ondernemers doen per kwartaal btw-aangifte. Aangifte en betaling moeten binnen zijn op de laatste dag van de maand na het kwartaal. Ook als je niets hebt gefactureerd, doe je aangifte.",
             },
             {
               kind: "table",
@@ -297,12 +297,12 @@ export const kb: Dict["kb"] = {
     "inkomstenbelasting-zzp": {
       slug: "inkomstenbelasting-zzp",
       meta: {
-        title: "Inkomstenbelasting als zzp'er: zo wordt het berekend (2026)",
+        title: "Inkomstenbelasting: zo wordt het berekend (2026)",
         description:
           "Van winst naar inkomstenbelasting: zelfstandigenaftrek, startersaftrek, mkb-winstvrijstelling, tarieven, heffingskortingen en Zvw in 2026. Met rekenvoorbeeld.",
       },
-      h1: "Inkomstenbelasting als zzp'er: van winst naar aanslag",
-      lead: "Als zzp'er betaal je inkomstenbelasting over je winst, na een paar aftrekposten. Daarbovenop komt de Zvw-bijdrage. Stap voor stap ziet dat er zo uit.",
+      h1: "Inkomstenbelasting: van winst naar aanslag",
+      lead: "Je betaalt inkomstenbelasting over je winst, na een paar aftrekposten. Daarbovenop komt de Zvw-bijdrage. Stap voor stap ziet dat er zo uit.",
       shortAnswer:
         "Je winst gaat omlaag met de zelfstandigenaftrek (€1.200 in 2026, als je aan het urencriterium voldoet), eventueel de startersaftrek (€2.123) en de mkb-winstvrijstelling (12,7%). Over wat overblijft betaal je 35,75% tot €38.883 en 37,56% daarboven, min heffingskortingen. Daarnaast betaal je 4,85% Zvw.",
       readMinutes: 7,
@@ -401,7 +401,7 @@ export const kb: Dict["kb"] = {
       meta: {
         title: "De kleineondernemersregeling (KOR) uitgelegd (2026)",
         description:
-          "Wat is de KOR, wanneer mag je meedoen, wat zijn de voor- en nadelen en wat gebeurt er als je boven €20.000 omzet komt? Uitleg voor zzp'ers.",
+          "Wat is de KOR, wanneer mag je meedoen, wat zijn de voor- en nadelen en wat gebeurt er als je boven €20.000 omzet komt?",
       },
       h1: "De kleineondernemersregeling (KOR): wanneer is het slim?",
       lead: "Met de KOR reken je geen btw en doe je geen btw-aangifte. Dat scheelt werk en kan je prijzen voor particulieren verlagen. Maar je mag dan ook geen btw terugvragen.",
@@ -484,7 +484,7 @@ export const kb: Dict["kb"] = {
       ],
       sources: [src.korVoorwaarden, src.korAf, src.korAan],
       related: [
-        { href: "/kennisbank/btw-berekenen-zzp", label: "Btw berekenen als zzp'er" },
+        { href: "/kennisbank/btw-berekenen-zzp", label: "Btw berekenen" },
         { href: "/voor-zzpers", label: "Voor wie Mizara is" },
         { href: "/functies/facturen", label: "Facturen in Mizara" },
       ],

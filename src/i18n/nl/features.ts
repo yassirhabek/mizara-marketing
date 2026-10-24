@@ -5,7 +5,7 @@ export const features: Dict["features"] = {
     meta: {
       title: "Functies: facturen, kosten, bankimport en belastingoverzicht",
       description:
-        "Alles wat Mizara doet voor je administratie als zzp'er: facturen en offertes, bonnetjes uitlezen, bankafschriften importeren en een schatting van je btw, inkomstenbelasting en Zvw.",
+        "Alles wat Mizara doet voor je administratie: facturen en offertes, bonnetjes uitlezen, bankafschriften importeren en een schatting van je btw, inkomstenbelasting en Zvw.",
     },
     h1: "Wat Mizara voor je administratie doet",
     lead: "Vier onderdelen die op elkaar aansluiten. Een factuur telt mee in je omzet, een betaling op je afschrift koppelt aan die factuur, en je belastingoverzicht rekent met allebei.",
@@ -25,7 +25,7 @@ export const features: Dict["features"] = {
       nav: "Facturen",
       summary: "Facturen en offertes die voldoen aan de factuureisen, met btw per regel en herinneringen als er niet betaald wordt.",
       meta: {
-        title: "Facturen maken als zzp'er",
+        title: "Facturen maken",
         description:
           "Maak facturen met doorlopende nummers en de juiste btw. Offertes met digitale handtekening, terugkerende facturen, betaalherinneringen en betalen via iDEAL.",
       },
@@ -99,7 +99,7 @@ export const features: Dict["features"] = {
             },
             {
               kind: "p",
-              text: "Mizara rekent die belasting niet met een vast percentage, maar over je hele jaar. Waarom dat uitmaakt, lees je in [hoeveel belasting je apart zet als zzp'er](/kennisbank/hoeveel-belasting-apart-zetten-zzp).",
+              text: "Mizara rekent die belasting niet met een vast percentage, maar over je hele jaar. Waarom dat uitmaakt, lees je in [hoeveel belasting je apart zet](/kennisbank/hoeveel-belasting-apart-zetten-zzp).",
             },
           ],
         },
@@ -115,12 +115,12 @@ export const features: Dict["features"] = {
         },
         {
           q: "Welk btw-tarief moet ik rekenen?",
-          a: "Dat hangt af van wat je levert. Voor de meeste diensten is het 21%. Lees meer in [btw berekenen als zzp'er](/kennisbank/btw-berekenen-zzp).",
+          a: "Dat hangt af van wat je levert. Voor de meeste diensten is het 21%. Lees meer in [btw berekenen](/kennisbank/btw-berekenen-zzp).",
         },
       ],
       related: [
         { href: "/functies/kosten", label: "Kosten en bonnetjes" },
-        { href: "/kennisbank/btw-berekenen-zzp", label: "Btw berekenen als zzp'er" },
+        { href: "/kennisbank/btw-berekenen-zzp", label: "Btw berekenen" },
         { href: "/demo", label: "Maak een factuur in de demo" },
       ],
     },
@@ -129,7 +129,7 @@ export const features: Dict["features"] = {
       nav: "Kosten",
       summary: "Bonnetjes uploaden, laten uitlezen en zelf bevestigen. Met categorie, btw en het bonnetje bij de boeking.",
       meta: {
-        title: "Kosten en bonnetjes boeken als zzp'er",
+        title: "Kosten en bonnetjes boeken",
         description:
           "Upload een bonnetje en laat bedrag, datum en btw uitlezen. Jij controleert en bevestigt. Elke uitgave telt mee in je btw en je winst.",
       },
@@ -350,7 +350,7 @@ export const features: Dict["features"] = {
             },
             {
               kind: "p",
-              text: "Een stap voor stap uitgewerkt voorbeeld staat in [hoeveel belasting je apart zet als zzp'er](/kennisbank/hoeveel-belasting-apart-zetten-zzp).",
+              text: "Een stap voor stap uitgewerkt voorbeeld staat in [hoeveel belasting je apart zet](/kennisbank/hoeveel-belasting-apart-zetten-zzp).",
             },
           ],
         },
@@ -407,7 +407,7 @@ export const features: Dict["features"] = {
       ],
       related: [
         { href: "/kennisbank/hoeveel-belasting-apart-zetten-zzp", label: "Hoeveel belasting apart zetten?" },
-        { href: "/kennisbank/inkomstenbelasting-zzp", label: "Inkomstenbelasting als zzp'er" },
+        { href: "/kennisbank/inkomstenbelasting-zzp", label: "Inkomstenbelasting" },
         { href: "/demo", label: "Zie de reservering in de demo" },
       ],
     },

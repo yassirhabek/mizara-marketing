@@ -9,7 +9,7 @@ export const pricing: Dict["pricing"] = {
   h1: "Begin gratis. Betaal pas als je meer nodig hebt.",
   lead: "Factureren kan gratis. Wil je ook je kosten, bankafschrift en aangiftecijfers bijhouden, dan kies je een abonnement. Maandelijks opzegbaar, en je gegevens kun je altijd exporteren.",
   plansTitle: "Abonnementen",
-  recommended: "Aanbevolen voor zzp'ers",
+  recommended: "Aanbevolen",
   perMonth: "per maand",
   exVat: "excl. btw",
   inclVat: "{price} incl. btw",
@@ -27,7 +27,7 @@ export const pricing: Dict["pricing"] = {
     },
     facturen: {
       name: "Facturen",
-      tagline: "Voor zzp'ers die vooral factureren",
+      tagline: "Voor wie vooral factureert",
       features: ["Onbeperkt facturen en offertes", "Periodieke facturen", "Urenregistratie"],
     },
     boekhouden: {
@@ -77,7 +77,7 @@ export const pricing: Dict["pricing"] = {
     ],
   },
   accountant:
-    "**Ben je accountant?** Met de kantoorlicentie werken al je klanten op het hoogste abonnement, vanaf {firm} per maand excl. btw. Mail [support@mizara.app](mailto:support@mizara.app) voor de mogelijkheden.",
+    "**Ben je accountant?** Met de kantoorlicentie werken al je klanten op het hoogste abonnement, vanaf {firm} per maand excl. btw. Mail [support@mizara.nl](mailto:support@mizara.nl) voor de mogelijkheden.",
   faqTitle: "Vragen over prijzen",
   faq: [
     {

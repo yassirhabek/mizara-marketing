@@ -13,16 +13,23 @@ export function GET(request: NextRequest) {
   const response = NextResponse.redirect(target, 302);
   response.headers.set("Cache-Control", "no-store");
 
+  // Match the request, not NODE_ENV — `next start` on http://localhost must still set the cookie.
+  const secure = request.nextUrl.protocol === "https:";
   const state = searchParams.get("state");
   if (state === "in") {
     response.cookies.set(AUTH_HINT_COOKIE, "1", {
       path: "/",
       maxAge: THIRTY_DAYS,
       sameSite: "lax",
-      secure: process.env.NODE_ENV === "production",
+      secure,
     });
   } else if (state === "out") {
-    response.cookies.delete(AUTH_HINT_COOKIE);
+    response.cookies.set(AUTH_HINT_COOKIE, "", {
+      path: "/",
+      maxAge: 0,
+      sameSite: "lax",
+      secure,
+    });
   }
   return response;
 }

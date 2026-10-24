@@ -9,7 +9,7 @@ import { Unify } from "@/components/home/unify";
 import { ProductTour } from "@/components/home/product-tour";
 import { EnterApp } from "@/components/home/enter-app";
 import { TaxReveal } from "@/components/home/tax-reveal";
-import { FaqPreview, FinalCta, Honest, Imports } from "@/components/home/closing";
+import { FaqPreview, FinalCta, Imports } from "@/components/home/closing";
 import { PricingPreview } from "@/components/home/pricing-preview";
 import { notFound } from "next/navigation";
 
@@ -34,7 +34,6 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
       <ProductTour t={t} lang={lang} story={story} />
       <EnterApp t={t} lang={lang} />
       <TaxReveal t={t} lang={lang} story={story} />
-      <Honest t={t} lang={lang} />
       <Imports t={t} />
       <PricingPreview t={t} lang={lang} />
       <FaqPreview t={t} lang={lang} />

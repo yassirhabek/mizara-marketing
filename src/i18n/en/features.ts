@@ -25,7 +25,7 @@ export const features: Dict["features"] = {
       nav: "Invoices",
       summary: "Invoices and quotes that meet the Dutch invoice requirements, with VAT per line and reminders when clients don't pay.",
       meta: {
-        title: "Invoicing for freelancers in the Netherlands",
+        title: "Invoicing in the Netherlands",
         description:
           "Create invoices with sequential numbers and the right VAT. Quotes with digital signature, recurring invoices, payment reminders and iDEAL payments.",
       },
@@ -99,7 +99,7 @@ export const features: Dict["features"] = {
             },
             {
               kind: "p",
-              text: "Mizara doesn't use a fixed percentage for that tax, it calculates over your whole year. Why that matters is explained in [how much tax to set aside as a freelancer](/kennisbank/hoeveel-belasting-apart-zetten-zzp).",
+              text: "Mizara doesn't use a fixed percentage for that tax, it calculates over your whole year. Why that matters is explained in [how much tax to set aside](/kennisbank/hoeveel-belasting-apart-zetten-zzp).",
             },
           ],
         },
@@ -115,12 +115,12 @@ export const features: Dict["features"] = {
         },
         {
           q: "Which VAT rate should I charge?",
-          a: "It depends on what you supply. For most services it's 21%. Read more in [calculating VAT as a freelancer](/kennisbank/btw-berekenen-zzp).",
+          a: "It depends on what you supply. For most services it's 21%. Read more in [calculating VAT](/kennisbank/btw-berekenen-zzp).",
         },
       ],
       related: [
         { href: "/functies/kosten", label: "Expenses and receipts" },
-        { href: "/kennisbank/btw-berekenen-zzp", label: "Calculating VAT as a freelancer" },
+        { href: "/kennisbank/btw-berekenen-zzp", label: "Calculating VAT" },
         { href: "/demo", label: "Create an invoice in the demo" },
       ],
     },
@@ -129,7 +129,7 @@ export const features: Dict["features"] = {
       nav: "Expenses",
       summary: "Upload receipts, have them read and confirm them yourself. With category, VAT and the receipt attached.",
       meta: {
-        title: "Booking expenses and receipts as a freelancer",
+        title: "Booking expenses and receipts",
         description:
           "Upload a receipt and have the amount, date and VAT read for you. You check and confirm. Every expense counts towards your VAT and your profit.",
       },
@@ -350,7 +350,7 @@ export const features: Dict["features"] = {
             },
             {
               kind: "p",
-              text: "A worked example is in [how much tax to set aside as a freelancer](/kennisbank/hoeveel-belasting-apart-zetten-zzp).",
+              text: "A worked example is in [how much tax to set aside](/kennisbank/hoeveel-belasting-apart-zetten-zzp).",
             },
           ],
         },
@@ -407,7 +407,7 @@ export const features: Dict["features"] = {
       ],
       related: [
         { href: "/kennisbank/hoeveel-belasting-apart-zetten-zzp", label: "How much tax to set aside?" },
-        { href: "/kennisbank/inkomstenbelasting-zzp", label: "Income tax for freelancers" },
+        { href: "/kennisbank/inkomstenbelasting-zzp", label: "Income tax" },
         { href: "/demo", label: "See the set-aside in the demo" },
       ],
     },

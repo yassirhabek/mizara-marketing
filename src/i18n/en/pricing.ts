@@ -9,7 +9,7 @@ export const pricing: Dict["pricing"] = {
   h1: "Start free. Pay only when you need more.",
   lead: "Invoicing is free. If you also want to keep track of your expenses, bank statements and tax return figures, pick a plan. Cancel monthly, and you can always export your data.",
   plansTitle: "Plans",
-  recommended: "Recommended for freelancers",
+  recommended: "Recommended",
   perMonth: "a month",
   exVat: "excl. VAT",
   inclVat: "{price} incl. VAT",
@@ -27,7 +27,7 @@ export const pricing: Dict["pricing"] = {
     },
     facturen: {
       name: "Invoicing",
-      tagline: "For freelancers who mostly send invoices",
+      tagline: "For anyone who mostly sends invoices",
       features: ["Unlimited invoices and quotes", "Recurring invoices", "Time tracking"],
     },
     boekhouden: {
@@ -77,7 +77,7 @@ export const pricing: Dict["pricing"] = {
     ],
   },
   accountant:
-    "**Are you an accountant?** With the firm licence all your clients work on the top plan, from {firm} a month excl. VAT. Email [support@mizara.app](mailto:support@mizara.app) to talk about the options.",
+    "**Are you an accountant?** With the firm licence all your clients work on the top plan, from {firm} a month excl. VAT. Email [support@mizara.nl](mailto:support@mizara.nl) to talk about the options.",
   faqTitle: "Questions about pricing",
   faq: [
     {
