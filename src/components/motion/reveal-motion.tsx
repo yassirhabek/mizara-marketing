@@ -15,6 +15,14 @@ const FROM: Record<string, string> = {
   left: "translateX(-20px)",
 };
 
+function motionAllowed() {
+  try {
+    return window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
+  } catch {
+    return false;
+  }
+}
+
 /**
  * Scroll reveals for server-rendered `[data-reveal]` elements outside the GSAP acts. CSS hides them
  * only while JS runs with motion allowed (see globals.css), so without JS or with reduced motion they
@@ -24,7 +32,9 @@ export function RevealMotion() {
   const pathname = usePathname();
 
   useEffect(() => {
-    if (!document.documentElement.classList.contains("motion-ok")) return;
+    if (!motionAllowed()) return;
+    document.documentElement.classList.add("js", "motion-ok");
+
     const targets = [...document.querySelectorAll<HTMLElement>("[data-reveal]:not([data-shown])")].filter((el) => !el.closest("[data-act]"));
     let pending: HTMLElement[] = [];
     let frame = 0;

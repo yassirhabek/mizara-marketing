@@ -1,8 +1,17 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { loadGsap, requestRefresh } from "@/lib/gsap";
 import { ACTS, type ActName } from "./acts";
+
+function motionAllowed() {
+  try {
+    return window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
+  } catch {
+    return false;
+  }
+}
 
 /**
  * Enhances a server-rendered act with GSAP. The HTML already shows the final, readable
@@ -11,10 +20,21 @@ import { ACTS, type ActName } from "./acts";
  */
 export function StoryMotion({ act, children }: { act: ActName; children: React.ReactNode }) {
   const ref = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const root = ref.current;
-    if (!root || !document.documentElement.classList.contains("motion-ok")) return;
+    if (!root) return;
+
+    if (!motionAllowed()) {
+      /* CSS only hides [data-enter] while .motion-ok && !data-ready — mark ready so
+         a stale class from a prior route cannot leave content invisible. */
+      root.dataset.ready = "true";
+      return;
+    }
+
+    document.documentElement.classList.add("js", "motion-ok");
+
     let cancelled = false;
     let revert: (() => void) | undefined;
 
@@ -26,7 +46,10 @@ export function StoryMotion({ act, children }: { act: ActName; children: React.R
       }, root);
       root.dataset.ready = "true";
       revert = () => ctx.revert();
-      requestRefresh();
+      /* Soft lang switches keep scrollY; refresh once layout commits so scrubbed
+         acts (unify/enter/breakdown) land on the right progress instead of "from". */
+      requestRefresh(0);
+      requestRefresh(120);
     });
 
     return () => {
@@ -34,7 +57,7 @@ export function StoryMotion({ act, children }: { act: ActName; children: React.R
       revert?.();
       delete root.dataset.ready;
     };
-  }, [act]);
+  }, [act, pathname]);
 
   return (
     <div ref={ref} data-act={act} className="contents">

@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { MobileCta } from "@/components/mobile-cta";
 import { RevealMotion } from "@/components/motion/reveal-motion";
+import { BootScript } from "@/components/boot-script";
 import { JsonLd } from "@/components/json-ld";
 import { getDict, isLocale, locales } from "@/i18n";
 import { siteUrl } from "@/lib/env";
@@ -54,10 +55,6 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-/* Runs before first paint: marks JS as available and records whether motion is allowed,
-   so CSS can hide animated "from" states only when GSAP will actually play them. */
-const bootScript = `(function(){var d=document.documentElement;d.classList.add('js');try{if(window.matchMedia('(prefers-reduced-motion: no-preference)').matches)d.classList.add('motion-ok')}catch(e){}})();`;
-
 export default async function LangLayout({
   children,
   params,
@@ -73,7 +70,7 @@ export default async function LangLayout({
       suppressHydrationWarning
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: bootScript }} />
+        <BootScript />
         <JsonLd data={organizationLd(lang)} />
         <JsonLd data={websiteLd(lang)} />
       </head>
