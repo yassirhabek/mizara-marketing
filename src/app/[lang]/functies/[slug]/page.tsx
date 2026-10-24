@@ -4,9 +4,10 @@ import { getDict, isLocale, locales, type FeatureSlug } from "@/i18n";
 import { pageMetadata } from "@/lib/seo";
 import { FEATURE_SLUGS } from "@/lib/routes";
 import { homeStory } from "@/lib/demo-tax/story";
-import { signupUrl } from "@/lib/env";
+import { appUrl, signupUrl } from "@/lib/env";
 import { Container } from "@/components/ui/container";
-import { ButtonLink, ExternalButton } from "@/components/ui/button";
+import { ButtonLink } from "@/components/ui/button";
+import { AppButton } from "@/components/app-button";
 import { PageHeader } from "@/components/page-shell";
 import { Related, Sections } from "@/components/content/blocks";
 import { FeatureScene } from "@/components/content/feature-scene";
@@ -48,9 +49,12 @@ export default async function FeaturePage({ params }: PageProps<"/[lang]/functie
         lead={page.lead}
       >
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <ExternalButton href={signupUrl} size="lg" arrow>
-            {t.common.cta.signup}
-          </ExternalButton>
+          <AppButton
+            guest={{ href: signupUrl, label: t.common.cta.signup }}
+            member={{ href: appUrl, label: t.common.cta.openApp }}
+            size="lg"
+            arrow
+          />
           <ButtonLink href={`/${lang}/demo`} variant="secondary" size="lg">
             {t.common.cta.demoShort}
           </ButtonLink>

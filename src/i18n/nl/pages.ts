@@ -196,10 +196,10 @@ export const legal: Dict["legal"] = {
   privacy: {
     meta: {
       title: "Privacy op mizara.app",
-      description: "Welke gegevens deze website verwerkt: alleen een taalcookie en je themavoorkeur. De demo draait volledig in je browser.",
+      description: "Welke gegevens deze website verwerkt: alleen functionele cookies voor je taal en je inlogstatus, en je themavoorkeur. De demo draait volledig in je browser.",
     },
     h1: "Privacy op deze website",
-    updated: "2026-10-23",
+    updated: "2026-10-24",
     intro: `Deze pagina gaat over de website mizara.app. Voor de app zelf, waar je administratie staat, geldt de [privacyverklaring van de app](${APP}/privacy).`,
     sections: [
       {
@@ -210,6 +210,7 @@ export const legal: Dict["legal"] = {
             kind: "ul",
             items: [
               "**Een taalcookie** (`locale`), zodat je de volgende keer in dezelfde taal terugkomt. Deze cookie is functioneel en blijft een jaar bewaard.",
+              "**Een inlogcookie** (`mz_app`), die we zetten als je inlogt in de app en weghalen als je uitlogt, zodat het menu een link naar de app toont in plaats van de aanmeldknop. Er staat alleen de waarde `1` in, niet wie je bent, en hij blijft hooguit 30 dagen bewaard.",
               "**Je themavoorkeur** (licht of donker) in de lokale opslag van je browser. Die verlaat je apparaat niet.",
             ],
           },

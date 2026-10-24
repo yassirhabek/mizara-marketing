@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { getDict, type Locale } from "@/i18n";
-import { signupUrl } from "@/lib/env";
+import { appUrl, signupUrl } from "@/lib/env";
 import { buttonClass } from "@/components/ui/button";
+import { AppButton } from "@/components/app-button";
 import { MobileCtaReveal } from "@/components/mobile-cta-reveal";
 
 /** Sticky primary action on small screens. Server-rendered; the reveal only toggles visibility. */
@@ -10,9 +11,11 @@ export function MobileCta({ lang }: { lang: Locale }) {
   return (
     <MobileCtaReveal>
       <div className="safe-bottom flex gap-2 border-t border-rule bg-paper/90 px-4 pt-3 max-[359px]:px-3 backdrop-blur-md">
-        <a href={signupUrl} className={buttonClass("primary", "md", "min-w-0 flex-1 max-[359px]:px-3")}>
-          {t.cta.signup}
-        </a>
+        <AppButton
+          guest={{ href: signupUrl, label: t.cta.signup }}
+          member={{ href: appUrl, label: t.cta.openApp }}
+          className="min-w-0 flex-1 max-[359px]:px-3"
+        />
         <Link href={`/${lang}/demo`} className={buttonClass("secondary", "md", "shrink-0 max-[359px]:px-3")}>
           {t.cta.demoShort}
         </Link>

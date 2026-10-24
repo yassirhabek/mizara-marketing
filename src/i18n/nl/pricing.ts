@@ -18,6 +18,7 @@ export const pricing: Dict["pricing"] = {
   freeLimit: "Tot {limit} verstuurde facturen per maand",
   startFree: "Begin gratis",
   startWith: "Begin met {plan}",
+  choose: "Kies {plan}",
   plans: {
     free: {
       name: "Gratis",

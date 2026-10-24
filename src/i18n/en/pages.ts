@@ -194,10 +194,10 @@ export const legal: Dict["legal"] = {
   privacy: {
     meta: {
       title: "Privacy on mizara.app",
-      description: "What this website processes: only a language cookie and your theme preference. The demo runs entirely in your browser.",
+      description: "What this website processes: only functional cookies for your language and sign-in status, and your theme preference. The demo runs entirely in your browser.",
     },
     h1: "Privacy on this website",
-    updated: "2026-10-23",
+    updated: "2026-10-24",
     intro: `This page is about the website mizara.app. For the app itself, where your bookkeeping lives, the [app's privacy statement](${appUrl}/privacy) applies.`,
     sections: [
       {
@@ -208,6 +208,7 @@ export const legal: Dict["legal"] = {
             kind: "ul",
             items: [
               "**A language cookie** (`locale`), so you come back in the same language next time. This cookie is functional and kept for one year.",
+              "**A sign-in cookie** (`mz_app`), set when you sign in to the app and removed when you sign out, so the menu shows a link to the app instead of the sign-up button. It only holds the value `1`, not who you are, and is kept for at most 30 days.",
               "**Your theme preference** (light or dark) in your browser's local storage. It never leaves your device.",
             ],
           },

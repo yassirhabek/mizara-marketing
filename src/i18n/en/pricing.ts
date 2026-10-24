@@ -18,6 +18,7 @@ export const pricing: Dict["pricing"] = {
   freeLimit: "Up to {limit} sent invoices a month",
   startFree: "Start free",
   startWith: "Start with {plan}",
+  choose: "Choose {plan}",
   plans: {
     free: {
       name: "Free",

@@ -9,6 +9,7 @@ import { buttonClass } from "@/components/ui/button";
 import { isActive, type NavItem } from "@/components/nav-links";
 import { LangToggle } from "@/components/lang-toggle";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { useAuthHint } from "@/components/use-auth-hint";
 
 type Labels = {
   menu: string;
@@ -16,6 +17,7 @@ type Labels = {
   primary: string;
   signup: string;
   login: string;
+  openApp: string;
   home: string;
   language: string;
   theme: string;
@@ -50,15 +52,18 @@ export function MobileMenu({
   lang,
   items,
   labels,
+  appUrl,
   signupUrl,
   loginUrl,
 }: {
   lang: Locale;
   items: NavItem[];
   labels: Labels;
+  appUrl: string;
   signupUrl: string;
   loginUrl: string;
 }) {
+  const signedIn = useAuthHint();
   const dialogRef = useRef<HTMLDialogElement>(null);
   const closing = useRef(false);
   const [open, setOpen] = useState(false);
@@ -167,12 +172,20 @@ export function MobileMenu({
             <LangToggle current={lang} label={labels.language} />
             <ThemeToggle label={labels.theme} />
           </div>
-          <a data-menu-item href={signupUrl} className={buttonClass("primary", "lg", "w-full")}>
-            {labels.signup}
-          </a>
-          <a data-menu-item href={loginUrl} className={buttonClass("secondary", "md", "w-full")}>
-            {labels.login}
-          </a>
+          {signedIn ? (
+            <a data-menu-item href={appUrl} className={buttonClass("primary", "lg", "w-full")}>
+              {labels.openApp}
+            </a>
+          ) : (
+            <>
+              <a data-menu-item href={signupUrl} className={buttonClass("primary", "lg", "w-full")}>
+                {labels.signup}
+              </a>
+              <a data-menu-item href={loginUrl} className={buttonClass("secondary", "md", "w-full")}>
+                {labels.login}
+              </a>
+            </>
+          )}
         </div>
       </dialog>
     </>

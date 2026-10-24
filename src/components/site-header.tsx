@@ -1,12 +1,12 @@
 import { getDict, type Locale } from "@/i18n";
-import { loginUrl, signupUrl } from "@/lib/env";
+import { appUrl, loginUrl, signupUrl } from "@/lib/env";
 import { Container } from "@/components/ui/container";
-import { ExternalButton } from "@/components/ui/button";
 import { Wordmark } from "@/components/wordmark";
 import { NavLinks, type NavItem } from "@/components/nav-links";
 import { LangToggle } from "@/components/lang-toggle";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { MobileMenu } from "@/components/mobile-menu";
+import { HeaderAuthCtas } from "@/components/header-auth-ctas";
 
 export function navItems(lang: Locale): NavItem[] {
   const { nav } = getDict(lang).common;
@@ -38,15 +38,12 @@ export function SiteHeader({ lang }: { lang: Locale }) {
             <LangToggle current={lang} label={t.a11y.language} />
             <ThemeToggle label={t.a11y.theme} />
           </div>
-          <a
-            href={loginUrl}
-            className="hidden min-h-11 items-center rounded-full px-4 text-[0.95rem] font-medium text-ink-soft transition-colors hover:text-ink md:inline-flex"
-          >
-            {t.cta.login}
-          </a>
-          <div className="hidden min-[360px]:block">
-            <ExternalButton href={signupUrl}>{t.cta.signup}</ExternalButton>
-          </div>
+          <HeaderAuthCtas
+            labels={{ login: t.cta.login, signup: t.cta.signup, openApp: t.cta.openApp }}
+            appUrl={appUrl}
+            loginUrl={loginUrl}
+            signupUrl={signupUrl}
+          />
           <MobileMenu
             lang={lang}
             items={items}
@@ -56,10 +53,12 @@ export function SiteHeader({ lang }: { lang: Locale }) {
               primary: t.nav.primary,
               signup: t.cta.signup,
               login: t.cta.login,
+              openApp: t.cta.openApp,
               home: t.nav.home,
               language: t.a11y.language,
               theme: t.a11y.theme,
             }}
+            appUrl={appUrl}
             signupUrl={signupUrl}
             loginUrl={loginUrl}
           />

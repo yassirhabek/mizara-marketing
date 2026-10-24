@@ -2,7 +2,8 @@
 
 import { useEffect, useId, useLayoutEffect, useMemo, useReducer, useRef, useState } from "react";
 import type { Locale } from "@/i18n/locales";
-import { signupUrl } from "@/lib/env";
+import { appUrl, signupUrl } from "@/lib/env";
+import { useAuthHint } from "@/components/use-auth-hint";
 import { formatDate, formatEuro, formatEuroWhole, centsToInput } from "@/lib/money";
 import { DEMO_CLIENTS, DEMO_RECEIPT, EXPENSE_CATEGORIES, type ExpenseCategory } from "@/lib/demo-tax/scenario";
 import { splitInclVat } from "@/lib/demo-tax/engine";
@@ -800,14 +801,15 @@ function QuickAdd({
 }
 
 function Result({ s }: { s: DemoStrings }) {
+  const signedIn = useAuthHint();
   return (
     <section className="mt-10 overflow-hidden rounded-[1.25rem] bg-ink px-6 py-10 text-paper sm:px-10" aria-labelledby="demo-result">
       <h3 id="demo-result" className="display text-3xl text-balance sm:text-4xl">
         {s.demo.result.title}
       </h3>
       <p className="mt-3 max-w-xl text-paper/80">{s.demo.result.text}</p>
-      <a href={signupUrl} className={buttonClass("primary", "lg", "mt-7")}>
-        {s.createOwn}
+      <a href={signedIn ? appUrl : signupUrl} className={buttonClass("primary", "lg", "mt-7")}>
+        {signedIn ? s.openApp : s.createOwn}
         <span aria-hidden="true">→</span>
       </a>
     </section>

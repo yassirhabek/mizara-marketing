@@ -21,6 +21,7 @@ export const common: Dict["common"] = {
     demo: "Probeer de interactieve demo",
     demoShort: "Probeer de demo",
     login: "Inloggen",
+    openApp: "Naar de app",
     createOwn: "Maak je eigen administratie aan",
   },
   a11y: {

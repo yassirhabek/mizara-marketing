@@ -97,6 +97,7 @@ export type Dict = {
       demo: string;
       demoShort: string;
       login: string;
+      openApp: string;
       createOwn: string;
     };
     a11y: { skip: string; theme: string; language: string; breadcrumb: string; switchTo: string };
@@ -354,6 +355,7 @@ export type Pricing = {
   freeLimit: string;
   startFree: string;
   startWith: string;
+  choose: string;
   plans: Record<PlanId, { name: string; tagline: string; features: string[] }>;
   trial: { title: string; text: Inline };
   compare: {

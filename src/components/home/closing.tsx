@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Dict } from "@/i18n";
 import type { Locale } from "@/i18n/locales";
-import { signupUrl } from "@/lib/env";
+import { appUrl, signupUrl } from "@/lib/env";
 import { Container } from "@/components/ui/container";
-import { ButtonLink, ExternalButton } from "@/components/ui/button";
+import { ButtonLink } from "@/components/ui/button";
+import { AppButton } from "@/components/app-button";
 import { RichText } from "@/components/rich-text";
 import { FaqList } from "@/components/faq-list";
 import { Mark } from "@/components/wordmark";
@@ -108,9 +109,13 @@ export function FinalCta({ t, lang }: { t: Dict; lang: Locale }) {
             </h2>
             <p className="t-lead mt-4 max-w-xl text-paper/80">{t.home.final.text}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ExternalButton href={signupUrl} size="lg" arrow className="w-full text-center max-sm:whitespace-normal sm:w-auto">
-                {t.common.cta.signup}
-              </ExternalButton>
+              <AppButton
+                guest={{ href: signupUrl, label: t.common.cta.signup }}
+                member={{ href: appUrl, label: t.common.cta.openApp }}
+                size="lg"
+                arrow
+                className="w-full text-center max-sm:whitespace-normal sm:w-auto"
+              />
               <ButtonLink
                 href={`/${lang}/demo`}
                 variant="ghost"

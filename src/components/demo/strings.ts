@@ -6,8 +6,9 @@ export type DemoStrings = {
   ui: Dict["ui"];
   tax: Dict["common"]["tax"];
   createOwn: string;
+  openApp: string;
 };
 
 export function demoStrings(t: Dict): DemoStrings {
-  return { demo: t.demo, ui: t.ui, tax: t.common.tax, createOwn: t.common.cta.createOwn };
+  return { demo: t.demo, ui: t.ui, tax: t.common.tax, createOwn: t.common.cta.createOwn, openApp: t.common.cta.openApp };
 }

@@ -1,8 +1,8 @@
 import type { Dict } from "@/i18n";
 import type { Locale } from "@/i18n/locales";
-import { signupUrl } from "@/lib/env";
+import { appUrl, signupUrl } from "@/lib/env";
 import { PLANS, PLAN_FEATURES, RECOMMENDED_PLAN, fillPrices, formatPrice, includes, withVat } from "@/lib/pricing";
-import { ExternalButton } from "@/components/ui/button";
+import { AppButton } from "@/components/app-button";
 import { RichText } from "@/components/rich-text";
 
 function Check({ className = "" }: { className?: string }) {
@@ -56,9 +56,16 @@ export function PlanCards({ t, lang }: { t: Dict; lang: Locale }) {
                 </li>
               ))}
             </ul>
-            <ExternalButton href={signupUrl} variant={recommended ? "primary" : "secondary"} className="mt-7 w-full">
-              {free ? p.startFree : fillPrices(p.startWith, lang, { plan: copy.name })}
-            </ExternalButton>
+            <AppButton
+              guest={{ href: signupUrl, label: free ? p.startFree : fillPrices(p.startWith, lang, { plan: copy.name }) }}
+              member={
+                free
+                  ? { href: appUrl, label: t.common.cta.openApp }
+                  : { href: `${appUrl}/upgrade`, label: fillPrices(p.choose, lang, { plan: copy.name }) }
+              }
+              variant={recommended ? "primary" : "secondary"}
+              className="mt-7 w-full"
+            />
           </li>
         );
       })}

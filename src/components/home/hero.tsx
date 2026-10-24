@@ -1,9 +1,10 @@
 import type { Dict } from "@/i18n";
 import type { Locale } from "@/i18n/locales";
 import type { HomeStory } from "@/lib/demo-tax/story";
-import { signupUrl } from "@/lib/env";
+import { appUrl, signupUrl } from "@/lib/env";
 import { Container } from "@/components/ui/container";
-import { ButtonLink, ExternalButton } from "@/components/ui/button";
+import { ButtonLink } from "@/components/ui/button";
+import { AppButton } from "@/components/app-button";
 import { InvoicePaper } from "@/components/product/invoice-paper";
 import { TaxEnvelope } from "@/components/product/tax-envelope";
 import { FictionTag } from "@/components/product/primitives";
@@ -36,9 +37,12 @@ export function Hero({ t, lang, story }: { t: Dict; lang: Locale; story: HomeSto
               {h.lead}
             </p>
             <div data-enter className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <ExternalButton href={signupUrl} size="lg" arrow>
-                {t.common.cta.signup}
-              </ExternalButton>
+              <AppButton
+                guest={{ href: signupUrl, label: t.common.cta.signup }}
+                member={{ href: appUrl, label: t.common.cta.openApp }}
+                size="lg"
+                arrow
+              />
               <ButtonLink href={`/${lang}/demo`} variant="secondary" size="lg">
                 {t.common.cta.demo}
               </ButtonLink>
